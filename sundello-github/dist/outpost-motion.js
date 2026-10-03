@@ -1,0 +1,1 @@
+const video=document.querySelector('.outpost-background-video'); video.muted=true; video.play().catch(()=>{});
