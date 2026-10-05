@@ -2,14 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sundello.com/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://sundello.com/outpost/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://sundello.com/origin/</loc>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://sundello.com/haven/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <loc>https://sundello.com/ava/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://sundello.com/workforce/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://sundello.com/workforce/outpost/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://sundello.com/workforce/haven/</loc>
+    <lastmod>2026-10-05</lastmod>
   </url>
 </urlset>
