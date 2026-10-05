@@ -168,11 +168,16 @@ body.hv2 .chip--concept {
   min-height: 420px;
   overflow: hidden;
 }
-.hv2-hero-figure img {
+body.hv2 .hv2-hero-figure img,
+body.hv2 .hv2-card-media img,
+body.hv2 .hv2-photo-lead-figure img,
+body.hv2 .hv2-photo-grid img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  max-width: none;
   object-fit: cover;
-  min-height: 420px;
 }
 .hv2-hero-figure figcaption {
   position: absolute;
@@ -280,8 +285,6 @@ body.hv2 .chip--concept {
   overflow: hidden;
 }
 .hv2-card-media img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 .hv2-card-media .chip {
@@ -399,10 +402,7 @@ body.hv2 .chip--concept {
   aspect-ratio: 4 / 3;
 }
 .hv2-photo-lead-figure img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  display: block;
 }
 .hv2-photo-lead-figure figcaption,
 .hv2-photo-grid figcaption {
@@ -435,10 +435,7 @@ body.hv2 .chip--concept {
   overflow: hidden;
 }
 .hv2-photo-grid img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  display: block;
 }
 @media (max-width: 900px) {
   .hv2-photo-lead { grid-template-columns: 1fr; }
@@ -703,20 +700,6 @@ body.hv2 .chip--concept {
 @media (max-width: 800px) {
   .hv2-contact-box { grid-template-columns: 1fr; }
   .hv2-contact-actions { justify-content: flex-start; }
-}
-
-@media (max-width: 390px) {
-  .hv2-hero { padding-top: 28px; }
-  .hv2-hero h1 { font-size: 40px; }
-  .hv2-hero-figure,
-  .hv2-hero-figure img { min-height: 240px; }
-  .hv2-card-body { padding: 18px 18px 22px; }
-  .hv2-sundial-visual { min-height: 240px; padding: 24px; }
-  .hv2-future-panel { min-height: 0; }
-  .hv2-photo-lead-figure figcaption,
-  .hv2-photo-grid figcaption {
-    flex-wrap: wrap;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
