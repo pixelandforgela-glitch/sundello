@@ -36,7 +36,7 @@
     const finish=roof.finishes.find(item=>item.id===id)||roof.finishes[0];
     rememberedFinish[currentRoof]=finish.id;
     finishGroup.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.finish===finish.id)));
-    roofImage.src='assets/'+finish.image;
+    roofImage.src='/assets/'+finish.image;
     roofImage.alt=`Origin 320 ${roof.label.toLowerCase()} exterior in ${finish.label}. ${finish.description}`;
     enlarge.setAttribute('aria-label',`Enlarge ${finish.label} ${roof.label.toLowerCase()} concept`);
     document.querySelector('#roof-caption-type').textContent=roof.label;

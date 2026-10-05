@@ -4,11 +4,22 @@ This is the only instruction file for this repo. `CLAUDE.md`, `GEMINI.md`, and `
 
 Sundello Homes markets compact 320 sq ft (20 × 16 ft) homes. The public site is a small hand-written static site: HTML, CSS, and vanilla JavaScript. No framework, no build. Blair owns it and is the only person who merges to `main`.
 
-Three public pages:
+One page per home, plus a workforce hub. `/` is the site landing. It points people to the homes and to workforce. Do not put a single model back on `/`.
 
-- **Origin 320** (`/`): a studio home with flat or pitched roof options and regional finish palettes, for individual buyers.
-- **Outpost 320** (`/outpost/`): single-occupancy workforce housing for employers and project sites.
-- **Haven 320** (`/haven/`): private homes for healthcare travelers, written for housing operators ("For services") and hospitals ("For hospitals").
+Public pages:
+
+- **Home** (`/`): landing for the homes and for workforce.
+- **Origin 320** (`/origin/`): a studio home with flat or pitched roof options and regional finish palettes, for individual buyers.
+- **AVA 320** (`/ava/`): a 320 sq ft accessory dwelling unit (ADU), same size class as Origin. The foundation is helical ground screws. The only published price on the site is on this page, in Blair’s approved words: “Starting under $100K plus dirtwork.” Do not put that sentence on any other page. Do not add another price, a payment plan, or a comparison.
+- **Workforce** (`/workforce/`): hub for work housing. People choose an offering here (Outpost or Haven), not a square-footage option.
+- **Outpost 320** (`/workforce/outpost/`): single-occupancy workforce housing for employers and project sites.
+- **Haven 320** (`/workforce/haven/`): private homes for healthcare travelers, written for housing operators ("For services") and hospitals ("For hospitals").
+
+Each home model page (`/origin/`, `/ava/`, and any future home) has a square-foot selector at the top. The only size today is 320, marked current. Add a future size as another link in that list. Do not redesign the page to do it.
+
+`/outpost/` and `/haven/` are old addresses. Each is a short `noindex` page with a meta refresh and a link to the new path, so a bookmark still resolves. They are not canonical and they are not in the sitemap. Do not add `_redirects` for them.
+
+Do not publish AVA specs Blair has not stated. For AVA that set is: 320 sq ft ADU, helical ground screws, and “Starting under $100K plus dirtwork.”
 
 ## Where the files are
 
@@ -17,15 +28,20 @@ The GitHub root is not the website. Publish `sundello-github/dist/` only.
 | Path | What it is |
 |---|---|
 | `sundello-github/dist/` | The website. This is the only folder a host may publish. |
-| `sundello-github/dist/index.html` | Origin 320, the home page (`/`) |
-| `sundello-github/dist/outpost/index.html` | Outpost 320 (`/outpost/`) |
-| `sundello-github/dist/haven/index.html` | Haven 320 (`/haven/`) |
+| `sundello-github/dist/index.html` | Site landing (`/`) |
+| `sundello-github/dist/origin/index.html` | Origin 320 (`/origin/`) |
+| `sundello-github/dist/ava/index.html` | AVA 320 (`/ava/`) |
+| `sundello-github/dist/workforce/index.html` | Workforce hub (`/workforce/`) |
+| `sundello-github/dist/workforce/outpost/index.html` | Outpost 320 (`/workforce/outpost/`) |
+| `sundello-github/dist/workforce/haven/index.html` | Haven 320 (`/workforce/haven/`) |
+| `sundello-github/dist/outpost/index.html` | Old-address courtesy page for `/outpost/` |
+| `sundello-github/dist/haven/index.html` | Old-address courtesy page for `/haven/` |
 | `sundello-github/dist/styles.css` | Site styles and the design tokens |
 | `sundello-github/dist/navigation.css` | Shared header. This is the file the pages load. |
 | `sundello-github/dist/navigation.js` | Shared header menu behavior |
 | `sundello-github/concepts/` | Old drafts (Sundial, and an older standalone Haven). Not the live site. Do not edit them as if they were, and do not publish them. |
 
-`sundello-github/dist/haven/navigation.css` and `sundello-github/dist/haven/navigation.js` are unused copies. Haven loads `../navigation.css` and `../navigation.js`. Editing the copies inside `haven/` does not change the page.
+`sundello-github/dist/workforce/haven/navigation.css` and `sundello-github/dist/workforce/haven/navigation.js` are unused copies. Haven loads `../../navigation.css` and `../../navigation.js`. Editing the copies inside `workforce/haven/` does not change the page.
 
 `sundello-github/dist/assets/hero.webp` is not referenced by any page. Leave it.
 
@@ -39,7 +55,7 @@ From the repo root:
 python3 -m http.server --directory sundello-github/dist
 ```
 
-Open `http://127.0.0.1:8000/`. Check `/`, `/outpost/`, and `/haven/`.
+Open `http://127.0.0.1:8000/`. Check `/`, `/origin/`, `/ava/`, `/workforce/`, `/workforce/outpost/`, `/workforce/haven/`, and the old-address pages `/outpost/` and `/haven/`.
 
 Python’s server does not use `404.html` for unknown paths. Open `http://127.0.0.1:8000/404.html` to preview the not-found page. On Cloudflare Pages, that file is the body of a real 404 for any missing URL, so every asset and link in `404.html` stays root-absolute (`/styles.css`, not `styles.css`).
 
@@ -73,15 +89,15 @@ Blair’s other allowed wording, also verbatim, is: "Sundello homes are built wi
 
 - No framework, no bundler, no `package.json`, no npm, no Node build, no React/Vue/Next, no templating step, no site generator.
 - Near-zero cost, simple enough for one person. Cloudflare Pages on the free plan is the host. Do not add paid services, analytics, trackers, cookies, or a form backend unless Blair asks in that task.
-- Do not invent email addresses, phone numbers, street addresses, service areas, legal entity names, prices, ratings, certifications, warranties, lead times, testimonials, or project examples. If it is not already on a public page or written in this file as approved, leave it out.
+- Do not invent email addresses, phone numbers, street addresses, service areas, legal entity names, prices, ratings, certifications, warranties, lead times, testimonials, or project examples. If it is not already on a public page or written in this file as approved, leave it out. The AVA price sentence in the pages list is the one approved price.
 - Do not publish placeholder contact details. Never replace live copy with a `PLACEHOLDER_` token or a guess. Never render a `mailto:` or `tel:` link that points at a placeholder.
 - There is no phone number on the site. Do not add one.
-- The only email on a live page is the Haven mailbox in `sundello-github/dist/haven/index.html` (`#form-note`) and `sundello-github/dist/haven/app.js`. Leave it until Blair decides. Do not copy it onto other pages.
-- `const SALES_EMAIL='';` in `sundello-github/dist/app.js` is empty on purpose. While it is empty, the home contact action stays the style-guide PDF. Do not fill it with a guessed address.
+- The only email on a live page is the Haven mailbox in `sundello-github/dist/workforce/haven/index.html` (`#form-note`) and `sundello-github/dist/workforce/haven/app.js`. Leave it until Blair decides. Do not copy it onto other pages. The courtesy page at `sundello-github/dist/haven/index.html` must not include it.
+- `const SALES_EMAIL='';` in `sundello-github/dist/app.js` is empty on purpose. While it is empty, the Origin page contact action stays the style-guide PDF. Do not fill it with a guessed address.
 - Keep each page’s footer text as it is. Do not add a copyright line that is not already there.
 - Never touch email DNS. MX, SPF, DKIM, and DMARC stay as they are. Sundello mail is at IONOS. A bad edit can break it. Do not add a second SPF record.
 - DNS stays at IONOS. Pointing `sundello.com` at Cloudflare Pages is a later cutover. It is not part of ordinary content work. Do not change nameservers, A records, or the apex verification TXT unless Blair’s task is the cutover itself.
-- Do not add prices, price ranges, "starting at" figures, financing terms, or cost comparisons. A hidden HTML comment such as `<!-- PRICING ON HOLD. PRICE_SLOT: ORIGIN_320_STARTING_PRICE. Do not render until Blair approves. -->` is allowed only when a task asks for a slot. Those comments must not use a `PLACEHOLDER_` prefix, and nothing may render.
+- Do not add prices, price ranges, financing terms, or cost comparisons. The one exception is the AVA page (`/ava/`): Blair approved this sentence, and no other price wording, for that page only: “Starting under $100K plus dirtwork.” Do not put it on the landing page, Origin, Outpost, Haven, or the workforce hub. A hidden HTML comment such as `<!-- PRICING ON HOLD. PRICE_SLOT: ORIGIN_320_STARTING_PRICE. Do not render until Blair approves. -->` is allowed only when a task asks for a slot. Those comments must not use a `PLACEHOLDER_` prefix, and nothing in the comment may render.
 - Do not create a new ChatGPT Site, and do not publish this checkout as a new Sites project. `.openai/hosting.json` is not in this repo. The old host was a ChatGPT Site. This repo replaces that workflow.
 - `sundello-github/dist/` is the only publishable folder. Notes and instructions stay outside it.
 - Do not add `X-Content-Type-Options: nosniff`.
@@ -111,7 +127,7 @@ Blair connects the GitHub repo once, in the Cloudflare dashboard (Workers & Page
 | Pull request previews | On |
 | Environment variables | none |
 
-Do not add `wrangler.toml`, `package.json`, `vercel.json`, a Pages Function, or `_redirects`. Do not set a custom domain in the same step as ordinary content edits. Do not add a catch-all redirect to `index.html`. Unknown URLs must 404.
+Do not add `wrangler.toml`, `package.json`, `vercel.json`, a Pages Function, or `_redirects`. Do not set a custom domain in the same step as ordinary content edits. Do not add a catch-all redirect to `index.html`. Unknown URLs must 404. Old `/outpost/` and `/haven/` are courtesy pages in the publish folder (`noindex`, a meta refresh, and a link). They are not a catch-all.
 
 There is no `_headers` file. Cloudflare Pages already serves `.webp` as `image/webp`. A `_headers` rule for `.webp` on Blair’s other site produced a duplicated `image/webp, image/webp` header, so do not add one. Do not add `nosniff`. The previous host (the ChatGPT Site) sent `application/octet-stream` for `.webp`; that was the host, not the files. Browsers still showed the images because nothing sent `nosniff`.
 
@@ -122,18 +138,26 @@ There is no `_headers` file. Cloudflare Pages already serves `.webp` as `image/w
 `sitemap.xml` lists only:
 
 - `https://sundello.com/`
-- `https://sundello.com/outpost/`
-- `https://sundello.com/haven/`
+- `https://sundello.com/origin/`
+- `https://sundello.com/ava/`
+- `https://sundello.com/workforce/`
+- `https://sundello.com/workforce/outpost/`
+- `https://sundello.com/workforce/haven/`
 
 Do not add `/privacy/`, `/terms/`, or `/about/` until those pages exist and Blair says the content is final. Do not add `concepts/` paths. They are not in the published folder.
 
-Canonical and `og:url` on the three public pages:
+Canonical and `og:url` on the public pages:
 
 - `https://sundello.com/`
-- `https://sundello.com/outpost/`
-- `https://sundello.com/haven/`
+- `https://sundello.com/origin/`
+- `https://sundello.com/ava/`
+- `https://sundello.com/workforce/`
+- `https://sundello.com/workforce/outpost/`
+- `https://sundello.com/workforce/haven/`
 
-Do not change existing titles or descriptions unless the task says to.
+The courtesy pages at `/outpost/` and `/haven/` are `noindex` and point their canonical at the new workforce URLs. Do not list them in the sitemap.
+
+Do not change existing titles or descriptions unless the task says to. Origin, Outpost, and Haven keep the descriptions they had before the path move. Origin’s title is `Sundello Origin 320` because `/` is the site landing, not the Origin page. The landing, AVA, and workforce pages have their own titles and descriptions.
 
 ## Checks before a PR
 
@@ -141,26 +165,28 @@ Do not change existing titles or descriptions unless the task says to.
 python3 -m http.server --directory sundello-github/dist
 ```
 
-Confirm `/`, `/outpost/`, `/haven/`, and `/404.html` return 200. Confirm the Haven mailbox and the empty `SALES_EMAIL` are still as they were, unless the task was to change them:
+Confirm `/`, `/origin/`, `/ava/`, `/workforce/`, `/workforce/outpost/`, `/workforce/haven/`, `/outpost/`, `/haven/`, and `/404.html` return 200. Confirm the Haven mailbox and the empty `SALES_EMAIL` are still as they were, unless the task was to change them. Confirm the AVA price sentence appears on the AVA page only:
 
 ```bash
-grep -n "blair@enterlectual.com" sundello-github/dist/haven/index.html sundello-github/dist/haven/app.js
+grep -n "blair@enterlectual.com" sundello-github/dist/workforce/haven/index.html sundello-github/dist/workforce/haven/app.js
 grep -n "SALES_EMAIL" sundello-github/dist/app.js
+grep -n "Starting under \$100K plus dirtwork" sundello-github/dist/ava/index.html
+grep -R "Starting under \$100K" sundello-github/dist --include='*.html' --include='*.js'
 ```
 
 ## Known open items
 
 Blair has not answered these. Do not guess, and do not build them as a side effect of another task.
 
-1. **Haven mailbox.** `blair@enterlectual.com` is on the live Haven page, in `sundello-github/dist/haven/index.html` and `sundello-github/dist/haven/app.js`. It is already public. Leave it until Blair replaces that form. The same address is in the unused draft `sundello-github/concepts/haven/`. Leave the draft alone.
-2. **Sales email.** `const SALES_EMAIL='';` in `sundello-github/dist/app.js`. Empty means the home page keeps the style-guide PDF button and does not show "Email Sundello". Blair is creating a sales address. Do not invent one.
-3. **Mobile header.** In `sundello-github/dist/navigation.css`, `.site-header > .nav-cta` is `display: none` below 1000px, and `.site-header nav > a` is `display: none` below 700px. On a phone the header keeps the Work Housing menu. Leave that until Blair decides.
-4. **Lead forms.** Origin and Outpost do not collect a lead. "Start a conversation" on those pages goes to the home `#contact` section, whose button downloads `assets/origin-style-guide.pdf`. Haven opens a `mailto:` to the mailbox above. A form backend (the standing recommendation is a Google Apps Script web app writing to a Google Sheet, no DNS change) waits on Blair. Do not add a form, a thank-you page, or `/api/` unless that task is explicit.
+1. **Haven mailbox.** `blair@enterlectual.com` is on the live Haven page, in `sundello-github/dist/workforce/haven/index.html` and `sundello-github/dist/workforce/haven/app.js`. It is already public. Leave it until Blair replaces that form. The same address is in the unused draft `sundello-github/concepts/haven/`. Leave the draft alone.
+2. **Sales email.** `const SALES_EMAIL='';` in `sundello-github/dist/app.js`. Empty means the Origin page keeps the style-guide PDF button and does not show "Email Sundello". Blair is creating a sales address. Do not invent one.
+3. **Mobile header.** In `sundello-github/dist/navigation.css`, `.site-header > .nav-cta` is `display: none` below 1000px, and `.site-header nav > a` is `display: none` below 700px. On a phone the header keeps the Homes and Workforce menus (`details`). Leave that CSS until Blair decides.
+4. **Lead forms.** Origin and Outpost do not collect a lead. Origin’s “Start a conversation” goes to `#contact` on `/origin/`, whose button downloads `assets/origin-style-guide.pdf`. The landing `#contact` points at that Origin section and at workforce. The workforce hub `#contact` points at Outpost and Haven. Haven opens a `mailto:` to the mailbox above. A form backend (the standing recommendation is a Google Apps Script web app writing to a Google Sheet, no DNS change) waits on Blair. Do not add a form, a thank-you page, or `/api/` unless that task is explicit.
 5. **Phone, service area, legal name.** None of these are on the site. Do not add them.
 6. **About, privacy, and terms.** Those URLs 404. Do not publish empty legal pages or write legal text. Ask Blair before any "content pending" page goes into `sundello-github/dist/`.
 7. **GBS sentence.** The approved sentence in the Brand section is not on the site. Do not add it unless the task asks.
 8. **www.** `https://www.sundello.com/` currently reaches the old host and shows "No site here". The fix belongs to the domain cutover (add `www` on this Pages project and 301 it to the apex, preserving path and query). Do not do it in a content change. Leave MX, SPF, DKIM, and DMARC alone. `http://sundello.com/` is a 302 to https on the old host; Pages will terminate TLS on its own after cutover.
 9. **Domain cutover.** DNS stays at IONOS (nameservers `ns1066.ui-dns.de`, `ns1078.ui-dns.org`, `ns1103.ui-dns.com`, `ns1038.ui-dns.biz`). Export the zone first. Change only the web records Pages tells Blair to change. Do not touch mail records. Do not do this as a side effect of a content PR.
 10. **Search Console.** Not set up in this repo. Blair can add the property later and submit `https://sundello.com/sitemap.xml`.
-11. **Prices.** None on the site. Keep it that way until Blair approves figures.
-12. **Home footer brand.** On `sundello-github/dist/index.html` the footer logo points at `#`, so it jumps to the top of the page. The header logo points at `./`. Leave both unless a task says otherwise.
+11. **Prices.** The only published price is on `/ava/`: “Starting under $100K plus dirtwork.” Blair approved that sentence for the AVA page only. Do not add it elsewhere. Do not add other prices, financing terms, or comparisons until Blair approves them.
+12. **Home footer brand.** On `sundello-github/dist/index.html` the footer logo points at `#`, so it jumps to the top of the page. The header logo points at `/`. The Origin page footer logo also points at `#`. Leave those unless a task says otherwise.
