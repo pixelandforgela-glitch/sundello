@@ -1,6 +1,6 @@
-/* Origin 320 customizer. SALES_EMAIL stays empty on purpose, same as /app.js. */
+/* Origin 320 customizer. SALES_EMAIL matches const SALES_EMAIL in /app.js. */
 (function () {
-  const SALES_EMAIL = '';
+  const SALES_EMAIL = 'todd.ellis@gbs-usa.build';
   const STORAGE_KEY = 'sundello-origin-320';
   const STEPS = [
     { id: 'roof', label: 'Roof' },
@@ -415,6 +415,13 @@
     return '<div><dt>' + esc(label) + '</dt><dd>' + esc(value) + '</dd></div>';
   }
 
+  function quoteSubject() {
+    const collectionName = collection() ? collection().name : 'Not selected';
+    const roofName = roof() ? roof().name : 'Not selected';
+    const layoutName = layout() ? layout().name : 'Not selected';
+    return 'Origin quote request - ' + collectionName + ', ' + roofName + ', ' + layoutName;
+  }
+
   function inquiryBody(fields) {
     const lines = [
       'Hello Sundello,',
@@ -479,10 +486,10 @@
       return;
     }
     const body = inquiryBody(fields);
-    const subject = 'Origin 320 project inquiry';
+    const subject = quoteSubject();
     if (SALES_EMAIL) {
       window.location.href = 'mailto:' + SALES_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      setStatus('Your email app will open with this Origin 320 build included.');
+      setStatus('Your email app will open a message to ' + SALES_EMAIL + '. If it does not, use Copy inquiry.');
       return;
     }
     showInquiry(body);
@@ -497,8 +504,9 @@
     const form = document.getElementById('quote-form');
     if (!form) return;
     const body = inquiryBody(formFields(form));
-    showInquiry(body);
-    copyText(body).then(function (ok) {
+    const text = 'To: ' + SALES_EMAIL + '\nSubject: ' + quoteSubject() + '\n\n' + body;
+    showInquiry(text);
+    copyText(text).then(function (ok) {
       setStatus(ok ? 'Inquiry copied.' : 'Select the inquiry text below to copy it.');
     });
   }
