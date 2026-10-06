@@ -1,0 +1,2507 @@
+{
+  "model": "Origin 320",
+  "price": "Starting at $99,000 plus site work and permits",
+  "structure": "Steel frame and MgO walls on American Ground Screw helical ground screws.",
+  "facts": [
+    {
+      "label": "Enclosed area",
+      "value": "320 sq ft"
+    },
+    {
+      "label": "Plan",
+      "value": "16 × 20 ft studio"
+    },
+    {
+      "label": "Ceilings",
+      "value": "9 ft"
+    },
+    {
+      "label": "Bath",
+      "value": "Curbless shower"
+    },
+    {
+      "label": "Porch",
+      "value": "Covered porch"
+    },
+    {
+      "label": "Roof",
+      "value": "Gable or flat"
+    }
+  ],
+  "roofs": [
+    {
+      "id": "gable",
+      "name": "Gable roof",
+      "description": "A 6:12 pitch in standing seam metal. The classic cottage profile."
+    },
+    {
+      "id": "flat",
+      "name": "Flat roof",
+      "description": "A TPO membrane that runs continuously over the porch for a cleaner, modern profile."
+    }
+  ],
+  "layouts": [
+    {
+      "id": "studio",
+      "name": "Studio",
+      "description": "Living and sleeping, a kitchen, dining, a bath with a 36 × 32 curbless shower, and a covered porch."
+    },
+    {
+      "id": "office",
+      "name": "Home office",
+      "description": "Open-plan office nook with a 48 inch desk on the west-wall pier. Bed and sofa are not in this layout. Adds a 20A desk circuit and data conduit from the main house. The shell stays the same."
+    }
+  ],
+  "collections": [
+    {
+      "id": "florida-keys",
+      "name": "Florida Keys",
+      "tagline": "Seafoam, coral, salt-washed white.",
+      "description": "Breezy and bright, with a coral front door. Built for salt air and sun, with impact-rated windows and doors as standard in Florida.",
+      "fixture": "Polished chrome",
+      "colors": [
+        {
+          "role": "Body",
+          "name": "Seafoam"
+        },
+        {
+          "role": "Trim",
+          "name": "Ultra pure white"
+        },
+        {
+          "role": "Door",
+          "name": "Coral"
+        }
+      ],
+      "palette": [
+        "Seafoam",
+        "Salt white",
+        "Coral",
+        "Deep teal"
+      ],
+      "images": {
+        "gable": {
+          "src": "/assets/origin/florida-keys-gable.webp",
+          "width": 667,
+          "height": 466,
+          "alt": "Florida Keys collection, gable roof, front exterior."
+        },
+        "flat": {
+          "src": "/assets/origin/florida-keys-flat.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Florida Keys collection, flat roof, front exterior.",
+          "srcSmall": "/assets/origin/florida-keys-flat-800.webp"
+        },
+        "gableViews": [
+          {
+            "src": "/assets/origin/florida-keys-gable.webp",
+            "width": 667,
+            "height": 466,
+            "alt": "Florida Keys collection, gable roof, front exterior."
+          },
+          {
+            "src": "/assets/origin/florida-keys-gable-side.webp",
+            "width": 1536,
+            "height": 1024,
+            "alt": "Florida Keys collection, gable roof, front side exterior.",
+            "srcSmall": "/assets/origin/florida-keys-gable-side-800.webp"
+          },
+          {
+            "src": "/assets/origin/florida-keys-gable-sw.webp",
+            "width": 1536,
+            "height": 1024,
+            "alt": "Florida Keys collection, gable roof, front southwest exterior.",
+            "srcSmall": "/assets/origin/florida-keys-gable-sw-800.webp"
+          },
+          {
+            "src": "/assets/origin/florida-keys-gable-rear.webp",
+            "width": 1536,
+            "height": 1024,
+            "alt": "Florida Keys collection, gable roof, rear northwest exterior.",
+            "srcSmall": "/assets/origin/florida-keys-gable-rear-800.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "coastal-california",
+      "name": "Coastal California",
+      "tagline": "Sea glass, fog, sand.",
+      "description": "Soft and weathered, like a morning on the coast. Sea glass siding.",
+      "fixture": "Matte black or brushed gold",
+      "colors": [
+        {
+          "role": "Body",
+          "name": "Sea glass"
+        },
+        {
+          "role": "Trim",
+          "name": "White"
+        }
+      ],
+      "palette": [
+        "Sea glass",
+        "Fog",
+        "Sand",
+        "White"
+      ],
+      "images": {
+        "gable": {
+          "src": "/assets/origin/coastal-california-gable.webp",
+          "width": 715,
+          "height": 484,
+          "alt": "Coastal California collection, gable roof, front exterior."
+        },
+        "flat": {
+          "src": "/assets/origin/coastal-california-flat.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Coastal California collection, flat roof, front exterior.",
+          "srcSmall": "/assets/origin/coastal-california-flat-800.webp"
+        }
+      }
+    },
+    {
+      "id": "rural-america",
+      "name": "Rural America",
+      "tagline": "Barn red, black iron.",
+      "description": "Classic farmhouse character. Barn red siding, a black iron door.",
+      "fixture": "Matte black, brushed gold or champagne bronze",
+      "colors": [
+        {
+          "role": "Body",
+          "name": "Barn red"
+        },
+        {
+          "role": "Trim",
+          "name": "Cream"
+        },
+        {
+          "role": "Door",
+          "name": "Iron black"
+        }
+      ],
+      "palette": [
+        "Barn red",
+        "Cream",
+        "Iron black",
+        "Olive"
+      ],
+      "images": {
+        "gable": {
+          "src": "/assets/origin/rural-america-gable.webp",
+          "width": 715,
+          "height": 496,
+          "alt": "Rural America collection, gable roof, front exterior."
+        },
+        "flat": {
+          "src": "/assets/origin/rural-america-flat.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Rural America collection, flat roof, front exterior.",
+          "srcSmall": "/assets/origin/rural-america-flat-800.webp"
+        }
+      }
+    },
+    {
+      "id": "colorado-mountains",
+      "name": "Colorado Mountains",
+      "tagline": "Forest green, blackened steel.",
+      "description": "A cabin-modern retreat. Deep forest siding, black hardware, and grey stone tones that stand up to ski-season traffic.",
+      "fixture": "Matte black",
+      "colors": [
+        {
+          "role": "Body",
+          "name": "Forest green"
+        },
+        {
+          "role": "Trim",
+          "name": "Bone"
+        },
+        {
+          "role": "Door",
+          "name": "Black"
+        }
+      ],
+      "palette": [
+        "Forest",
+        "Black",
+        "Stone",
+        "Bone"
+      ],
+      "images": {
+        "gable": {
+          "src": "/assets/origin/colorado-mountains-gable.webp",
+          "width": 721,
+          "height": 496,
+          "alt": "Colorado Mountains collection, gable roof, front exterior."
+        },
+        "flat": {
+          "src": "/assets/origin/colorado-mountains-flat.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Colorado Mountains collection, flat roof, front exterior.",
+          "srcSmall": "/assets/origin/colorado-mountains-flat-800.webp"
+        }
+      }
+    },
+    {
+      "id": "new-mexico-plains",
+      "name": "New Mexico Plains",
+      "tagline": "Sand, adobe, sage, charcoal.",
+      "description": "Sun-warmed Southwest calm. Terracotta underfoot, with brass and bronze finishes that glow at dusk.",
+      "fixture": "Brushed gold or champagne bronze",
+      "colors": [
+        {
+          "role": "Body",
+          "name": "Sand"
+        },
+        {
+          "role": "Trim",
+          "name": "Bone"
+        },
+        {
+          "role": "Door",
+          "name": "Charcoal"
+        }
+      ],
+      "palette": [
+        "Sand",
+        "Adobe",
+        "Sage",
+        "Charcoal",
+        "Bone"
+      ],
+      "images": {
+        "gable": {
+          "src": "/assets/origin/new-mexico-plains-gable.webp",
+          "width": 567,
+          "height": 420,
+          "alt": "New Mexico Plains collection, gable roof, front exterior."
+        },
+        "flat": {
+          "src": "/assets/origin/new-mexico-plains-flat.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "New Mexico Plains collection, flat roof, front exterior.",
+          "srcSmall": "/assets/origin/new-mexico-plains-flat-800.webp"
+        }
+      }
+    }
+  ],
+  "finishes": {
+    "florida-keys": [
+      {
+        "id": "exterior-paint",
+        "name": "Exterior paint",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Exterior paint",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Behr Marquee Exterior",
+                "detail": "Body seafoam, trim ultra pure white, door coral. Flat body, semi-gloss trim."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Behr Premium Plus Ultra",
+                "detail": "Same scheme, value tier, satin body over primed siding."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Behr Dynasty Exterior",
+                "detail": "Same scheme with extended dirt and fade resistance."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "interior-paint",
+        "name": "Interior paint",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Interior paint",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Behr Premium Plus Ultra",
+                "detail": "Warm white walls in eggshell, flat white ceilings."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Behr Marquee",
+                "detail": "Soft aqua accent at the bed niche, warm white elsewhere."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Behr Dynasty",
+                "detail": "Stain-resistant matte, best for rental turnover."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "flooring",
+        "name": "Flooring",
+        "scope": "Waterproof rigid-core plank throughout the living areas",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Flooring",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "LifeProof Rigid Core LVP",
+                "detail": "7 in. plank, waterproof."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Home Decorators Rigid Core LVP",
+                "detail": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lighting-package",
+        "name": "Lighting package",
+        "scope": "Recessed lighting, fixtures and devices",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Lighting package",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Commercial Electric + Hampton Bay",
+                "detail": "Six 4 in. LED recessed lights, flush mount, bath vanity fixture, Leviton Decora devices."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Home Decorators Collection",
+                "detail": "Woven rattan pendant over the bar, vanity bar at the bath."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hardware-bath-accessories",
+        "name": "Hardware & bath accessories",
+        "scope": "Polished chrome",
+        "groups": [
+          {
+            "id": "bath-accessories",
+            "label": "Bath accessories",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Bath accessory set",
+                "detail": "Towel bar, ring and paper holder, polished chrome."
+              }
+            ]
+          },
+          {
+            "id": "interior-levers",
+            "label": "Interior levers",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Interior door levers",
+                "detail": "Square-rose lever, chrome."
+              }
+            ]
+          },
+          {
+            "id": "entry-hardware",
+            "label": "Entry hardware",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Kwikset Halifax entry",
+                "detail": "Keyed entry lever, satin nickel."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cabinetry",
+        "name": "Cabinetry",
+        "scope": "Kitchen and bath vanity; every option is soft-close",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Cabinetry",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Hampton Bay Designer Series",
+                "detail": "White Shaker, soft-close."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Hampton Bay two-tone",
+                "detail": "White uppers over a grey base run, soft-close."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Home Decorators Newport",
+                "detail": "Coastal blue base, white uppers, soft-close."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kitchen-faucet",
+        "name": "Kitchen faucet",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Kitchen faucet",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta pull-down kitchen faucet",
+                "detail": "Spring spout, polished chrome."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "countertops",
+        "name": "Countertops",
+        "scope": "Kitchen and vanity",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Countertops",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Nebulo quartzite",
+                "detail": "White with soft grey veining."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Audacia quartzite",
+                "detail": "Bright white with bold grey movement."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-tile-floor",
+        "name": "Bath tile - floor",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath tile - floor",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "MSI Metro Sand 12 x 24",
+                "detail": "Matte porcelain, stone look. Bathroom floor."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-tile-shower-wall",
+        "name": "Bath tile - shower wall",
+        "scope": "Grout: Bright White, Delorean Gray or Charcoal",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath tile - shower wall",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Daltile Restore 4 x 16",
+                "detail": "Bright white gloss subway tile, choice of grout color."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-lav-faucet",
+        "name": "Bath lav faucet",
+        "scope": "Polished chrome",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath lav faucet",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta Foundations",
+                "detail": "Single-handle lav faucet, chrome."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Moen Genta",
+                "detail": "Single-handle lav faucet, chrome."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shower-trim",
+        "name": "Shower trim",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Shower trim",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta shower trim",
+                "detail": "Multi-spray head, pressure-balance valve, chrome."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Moen shower trim",
+                "detail": "Single-handle posi-temp, chrome."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "coastal-california": [
+      {
+        "id": "exterior-paint",
+        "name": "Exterior paint",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Exterior paint",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Behr Marquee Exterior",
+                "detail": "Body sea glass, trim white. Flat body, semi-gloss trim."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Behr Premium Plus Ultra",
+                "detail": "Same scheme, value tier, satin body over primed siding."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Behr Dynasty Exterior",
+                "detail": "Same scheme with extended dirt and fade resistance."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "interior-paint",
+        "name": "Interior paint",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Interior paint",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Behr Premium Plus Ultra",
+                "detail": "Sand walls in eggshell, white ceilings."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Behr Marquee",
+                "detail": "Soft sea glass accent wall behind the bed niche."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Behr Dynasty",
+                "detail": "Matte with high scrub rating for coastal humidity and traffic."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "flooring",
+        "name": "Flooring",
+        "scope": "Waterproof rigid-core plank throughout the living areas",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Flooring",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "LifeProof Rigid Core LVP",
+                "detail": "Waterproof."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lighting-package",
+        "name": "Lighting package",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Lighting package",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Commercial Electric + Hampton Bay",
+                "detail": "Six 4 in. LED recessed lights, linen drum flush mount, bath vanity fixture, Decora devices."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Home Decorators Collection",
+                "detail": "Plaster-look dome pendant, matte black vanity sconces at the bath."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hardware-bath-accessories",
+        "name": "Hardware & bath accessories",
+        "scope": "Matte black or brushed gold",
+        "groups": [
+          {
+            "id": "cabinet-pulls",
+            "label": "Cabinet pulls",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Liberty cabinet pulls",
+                "detail": "Matte black bar pull."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Liberty cabinet pulls, brass",
+                "detail": "Brushed brass."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Modern A-Line pulls",
+                "detail": "Brushed brass."
+              }
+            ]
+          },
+          {
+            "id": "bath-accessories",
+            "label": "Bath accessories",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Bath accessories",
+                "detail": "Matte black set."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Bath accessories, gold",
+                "detail": "Brushed gold set."
+              }
+            ]
+          },
+          {
+            "id": "entry-hardware",
+            "label": "Entry hardware",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Entry handleset",
+                "detail": "Matte black; brass available."
+              }
+            ]
+          },
+          {
+            "id": "interior-levers",
+            "label": "Interior levers",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Interior door levers",
+                "detail": "Square lever, matte black."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cabinetry",
+        "name": "Cabinetry",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Cabinetry",
+            "choices": [
+              {
+                "id": "team",
+                "tier": "Team",
+                "name": "Selected with your Sundello team",
+                "detail": ""
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Hampton Bay Designer Series",
+                "detail": "White Shaker, soft-close."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Home Decorators Hargrove",
+                "detail": "Sage green Shaker, soft-close."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kitchen-faucet",
+        "name": "Kitchen faucet",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Kitchen faucet",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta pull-down kitchen faucet",
+                "detail": "Spring spout, matte black."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "countertops",
+        "name": "Countertops",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Countertops",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Pitaya White granite",
+                "detail": "Light speckled white."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Silver Falls granite",
+                "detail": "Silver and charcoal movement."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Silver Grey granite",
+                "detail": "Deep grey with fine veining."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Grey Clouds honed quartzite",
+                "detail": "Soft matte grey, honed finish."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-tile-floor",
+        "name": "Bath tile - floor",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath tile - floor",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Vido White Matte 12 x 24",
+                "detail": "Soft white porcelain."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "MSI Metro Sand 12 x 24",
+                "detail": "Warm sand stone look."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "MSI Metro Gray 12 x 24",
+                "detail": "Linear grey texture."
+              },
+              {
+                "id": "alt-3",
+                "tier": "Alternate",
+                "name": "Montagna Dapple Gray 6 x 24",
+                "detail": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-tile-shower-wall",
+        "name": "Bath tile - shower wall",
+        "scope": "Grout: Bright White, Delorean Gray or Charcoal",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath tile - shower wall",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Pebble Gray 3 x 12",
+                "detail": "Glossy grey subway tile."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-lav-faucet",
+        "name": "Bath lav faucet",
+        "scope": "Matte black or brushed gold",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath lav faucet",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta Foundations",
+                "detail": "Matte black or brushed gold."
+              },
+              {
+                "id": "sig-2",
+                "tier": "Signature",
+                "name": "Delta Foundations, gold",
+                "detail": "Brushed gold finish."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Moen Genta",
+                "detail": "Matte black or brushed gold."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Moen Genta, gold",
+                "detail": "Brushed gold finish."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shower-trim",
+        "name": "Shower trim",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Shower trim",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta shower trim",
+                "detail": "Matte black."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Moen shower trim",
+                "detail": "Matte black."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Moen shower trim, gold",
+                "detail": "Brushed gold."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "rural-america": [
+      {
+        "id": "exterior-paint",
+        "name": "Exterior paint",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Exterior paint",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Behr Marquee Exterior",
+                "detail": "Body barn red, trim cream, door iron black. Flat body, semi-gloss trim."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Behr Premium Plus Ultra",
+                "detail": "Same scheme, value tier, satin body over primed siding."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Behr Dynasty Exterior",
+                "detail": "Same scheme with extended dirt and fade resistance."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "interior-paint",
+        "name": "Interior paint",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Interior paint",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Behr Premium Plus Ultra",
+                "detail": "Cream walls in eggshell, white ceilings, black door frames."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Behr Marquee",
+                "detail": "Olive accent at the kitchen, cream elsewhere."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Behr Dynasty",
+                "detail": "Scrubbable matte for high-traffic farm use."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "flooring",
+        "name": "Flooring",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Flooring",
+            "choices": [
+              {
+                "id": "team",
+                "tier": "Team",
+                "name": "Selected with your Sundello team",
+                "detail": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lighting-package",
+        "name": "Lighting package",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Lighting package",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Commercial Electric + Hampton Bay",
+                "detail": "Six recessed lights, black gooseneck porch light, bath vanity fixture, Decora devices."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Home Decorators Collection",
+                "detail": "Black barn pendants over the bar, cage vanity sconce at the bath."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hardware-bath-accessories",
+        "name": "Hardware & bath accessories",
+        "scope": "Matte black, brushed gold or champagne bronze",
+        "groups": [
+          {
+            "id": "cabinet-pulls",
+            "label": "Cabinet pulls",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Liberty cabinet pulls",
+                "detail": "Matte black."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Liberty cabinet pulls, brass",
+                "detail": "Brushed brass."
+              }
+            ]
+          },
+          {
+            "id": "bath-accessories",
+            "label": "Bath accessories",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Bath accessories",
+                "detail": "Matte black; brushed gold available."
+              }
+            ]
+          },
+          {
+            "id": "entry-hardware",
+            "label": "Entry hardware",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Entry handleset",
+                "detail": "Matte black; brass available."
+              }
+            ]
+          },
+          {
+            "id": "interior-levers",
+            "label": "Interior levers",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Interior door levers",
+                "detail": "Square lever, matte black."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cabinetry",
+        "name": "Cabinetry",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Cabinetry",
+            "choices": [
+              {
+                "id": "team",
+                "tier": "Team",
+                "name": "Selected with your Sundello team",
+                "detail": ""
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Home Decorators Washington",
+                "detail": "Olive green Shaker, soft-close."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kitchen-faucet",
+        "name": "Kitchen faucet",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Kitchen faucet",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta pull-down kitchen faucet",
+                "detail": "Matte black."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Delta pull-down, bronze",
+                "detail": "Champagne bronze."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "countertops",
+        "name": "Countertops",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Countertops",
+            "choices": [
+              {
+                "id": "team",
+                "tier": "Team",
+                "name": "Selected with your Sundello team",
+                "detail": ""
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Black Mist honed granite",
+                "detail": "Soft matte black."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Silver Grey granite",
+                "detail": "Deep grey with fine veining."
+              },
+              {
+                "id": "alt-3",
+                "tier": "Alternate",
+                "name": "Black Amani",
+                "detail": "Charcoal with subtle movement."
+              },
+              {
+                "id": "alt-4",
+                "tier": "Alternate",
+                "name": "Nebulo quartzite",
+                "detail": "White with soft grey veining."
+              },
+              {
+                "id": "alt-5",
+                "tier": "Alternate",
+                "name": "Linen Cream quartzite",
+                "detail": "Warm cream, waterfall-ready."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Grey Clouds honed quartzite",
+                "detail": "Soft matte grey, honed."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-tile-floor",
+        "name": "Bath tile - floor",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath tile - floor",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "MSI Metro Sand 12 x 24",
+                "detail": "Matte porcelain, warm stone look."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-tile-shower-wall",
+        "name": "Bath tile - shower wall",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath tile - shower wall",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Daltile Restore 3 x 6",
+                "detail": "Classic white subway."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-vanity-lighting",
+        "name": "Bath vanity lighting",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath vanity lighting",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Two-light vanity",
+                "detail": "Matte black cones."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Two-light vanity",
+                "detail": "Black and gold."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Merra vanity bar",
+                "detail": "Slim matte black bar."
+              },
+              {
+                "id": "alt-3",
+                "tier": "Alternate",
+                "name": "Halyn sconce",
+                "detail": "Black with brass, seeded globe."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-lav-faucet",
+        "name": "Bath lav faucet",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath lav faucet",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta lav faucet",
+                "detail": "Matte black or brushed gold."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Moen lav faucet",
+                "detail": "Matte black."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shower-trim",
+        "name": "Shower trim",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Shower trim",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta shower trim",
+                "detail": "Matte black."
+              },
+              {
+                "id": "sig-2",
+                "tier": "Signature",
+                "name": "Delta shower trim, bronze",
+                "detail": "Champagne bronze."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Moen shower trim",
+                "detail": "Matte black or brushed gold."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "colorado-mountains": [
+      {
+        "id": "exterior-paint",
+        "name": "Exterior paint",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Exterior paint",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Behr Marquee Exterior",
+                "detail": "Body forest green, trim bone, door black. Flat body, semi-gloss trim."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Behr Premium Plus Ultra",
+                "detail": "Same scheme, value tier, satin body over primed siding."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Behr Dynasty Exterior",
+                "detail": "Same scheme with extended dirt and fade resistance."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "interior-paint",
+        "name": "Interior paint",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Interior paint",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Behr Premium Plus Ultra",
+                "detail": "Bone walls in eggshell, white ceilings, black trim accents."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Behr Marquee",
+                "detail": "Deep forest accent wall behind the bed niche."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Behr Dynasty",
+                "detail": "Matte with high scrub rating for ski-season traffic."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "flooring",
+        "name": "Flooring",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Flooring",
+            "choices": [
+              {
+                "id": "team",
+                "tier": "Team",
+                "name": "Selected with your Sundello team",
+                "detail": ""
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Home Decorators Lake Annette LVP",
+                "detail": "12 mil wear layer."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lighting-package",
+        "name": "Lighting package",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Lighting package",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Commercial Electric + Hampton Bay",
+                "detail": "Six recessed lights, black flush mount, bath vanity fixture, exterior black downlight."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Home Decorators Collection",
+                "detail": "Blackened steel pendants and bath vanity bar, Decora devices."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hardware-bath-accessories",
+        "name": "Hardware & bath accessories",
+        "scope": "Matte black",
+        "groups": [
+          {
+            "id": "cabinet-pulls",
+            "label": "Cabinet pulls",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Liberty cabinet pulls",
+                "detail": "Matte black bar pull."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Liberty knurled pulls",
+                "detail": "Matte black, knurled grip."
+              }
+            ]
+          },
+          {
+            "id": "bath-accessories",
+            "label": "Bath accessories",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Bath accessories",
+                "detail": "Matte black set."
+              }
+            ]
+          },
+          {
+            "id": "entry-hardware",
+            "label": "Entry hardware",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Entry handleset",
+                "detail": "Matte black."
+              }
+            ]
+          },
+          {
+            "id": "interior-levers",
+            "label": "Interior levers",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Interior door levers",
+                "detail": "Square lever, matte black."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cabinetry",
+        "name": "Cabinetry",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Cabinetry",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Hampton Bay Melvern",
+                "detail": "Forest green Shaker, soft-close."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "KraftMaid Thornton",
+                "detail": "Evergreen painted cabinetry, soft-close."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kitchen-faucet",
+        "name": "Kitchen faucet",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Kitchen faucet",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta pull-down kitchen faucet",
+                "detail": "Spring spout, matte black."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "countertops",
+        "name": "Countertops",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Countertops",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Thunder White granite",
+                "detail": "Cream with taupe movement."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Black Pearl granite",
+                "detail": "Deep black, subtle shimmer."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Silver Falls granite",
+                "detail": "Silver and charcoal movement."
+              },
+              {
+                "id": "alt-3",
+                "tier": "Alternate",
+                "name": "Silver Grey granite",
+                "detail": "Deep grey with fine veining."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Grey Clouds honed quartzite",
+                "detail": "Soft matte grey, honed."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-tile-floor",
+        "name": "Bath tile - floor",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath tile - floor",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "MSI Himalayan Gray 12 x 24",
+                "detail": "Slate-look porcelain."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Vido White Matte 12 x 24",
+                "detail": "Soft white porcelain."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Montagna Dapple Gray 6 x 24",
+                "detail": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-tile-shower-wall",
+        "name": "Bath tile - shower wall",
+        "scope": "Grout: Bright White, Delorean Gray or Charcoal",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath tile - shower wall",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Daltile Restore 4 x 16",
+                "detail": "Ash grey subway tile."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Pebble Gray 3 x 12",
+                "detail": "Glossy grey subway tile."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-lav-faucet",
+        "name": "Bath lav faucet",
+        "scope": "Matte black",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath lav faucet",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta lav faucet",
+                "detail": "Matte black."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Moen lav faucet",
+                "detail": "Matte black."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shower-trim",
+        "name": "Shower trim",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Shower trim",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta shower trim",
+                "detail": "Matte black."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Moen shower trim",
+                "detail": "Matte black."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-vanity-lighting",
+        "name": "Bath vanity lighting",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath vanity lighting",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Two-light vanity",
+                "detail": "Matte black cones."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Merra vanity bar",
+                "detail": "Slim matte black bar."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Halyn sconce",
+                "detail": "Matte black, seeded globe."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "new-mexico-plains": [
+      {
+        "id": "exterior-paint",
+        "name": "Exterior paint",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Exterior paint",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Behr Marquee Exterior",
+                "detail": "Body sand, trim bone, door charcoal. Flat body, semi-gloss trim."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Behr Premium Plus Ultra",
+                "detail": "Same scheme, value tier, satin body over primed siding."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Behr Dynasty Exterior",
+                "detail": "Same scheme with extended dirt and fade resistance."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "interior-paint",
+        "name": "Interior paint",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Interior paint",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Behr Premium Plus Ultra",
+                "detail": "Bone walls in eggshell, white ceilings, charcoal trim accents."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Behr Marquee",
+                "detail": "Soft sage accent wall behind the bed niche."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "Behr Dynasty",
+                "detail": "Matte with high scrub rating for dusty high-traffic living."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "flooring",
+        "name": "Flooring",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Flooring",
+            "choices": [
+              {
+                "id": "team",
+                "tier": "Team",
+                "name": "Selected with your Sundello team",
+                "detail": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lighting-package",
+        "name": "Lighting package",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Lighting package",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Commercial Electric + Hampton Bay",
+                "detail": "Six recessed lights, bath vanity fixture, Decora devices."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Home Decorators Collection",
+                "detail": "Rattan and aged brass pendants, brass vanity sconces at the bath."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hardware-bath-accessories",
+        "name": "Hardware & bath accessories",
+        "scope": "Brushed gold or champagne bronze",
+        "groups": [
+          {
+            "id": "cabinet-pulls",
+            "label": "Cabinet pulls",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Modern A-Line pulls",
+                "detail": "Brushed brass."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Saddle leather pulls",
+                "detail": "Stitched leather loop."
+              }
+            ]
+          },
+          {
+            "id": "bath-accessories",
+            "label": "Bath accessories",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta Porter bath set",
+                "detail": "Oil-rubbed bronze."
+              }
+            ]
+          },
+          {
+            "id": "entry-hardware",
+            "label": "Entry hardware",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Montara entry set",
+                "detail": "Venetian bronze."
+              }
+            ]
+          },
+          {
+            "id": "interior-levers",
+            "label": "Interior levers",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Schlage interior levers",
+                "detail": "Aged bronze."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cabinetry",
+        "name": "Cabinetry",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Cabinetry",
+            "choices": [
+              {
+                "id": "team",
+                "tier": "Team",
+                "name": "Selected with your Sundello team",
+                "detail": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kitchen-faucet",
+        "name": "Kitchen faucet",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Kitchen faucet",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta pull-down kitchen faucet",
+                "detail": "Champagne bronze."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "countertops",
+        "name": "Countertops",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Countertops",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Thunder White granite",
+                "detail": "Cream with taupe movement."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Black Mist honed granite",
+                "detail": "Soft matte black."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Black Pearl granite",
+                "detail": "Deep black, subtle shimmer."
+              },
+              {
+                "id": "alt-3",
+                "tier": "Alternate",
+                "name": "Linen Cream quartzite",
+                "detail": "Warm cream, clean look."
+              },
+              {
+                "id": "alt-4",
+                "tier": "Alternate",
+                "name": "Desert Beach granite",
+                "detail": "Sand, gold and grey tones."
+              },
+              {
+                "id": "upg",
+                "tier": "Upgrade",
+                "name": "White Arabesque quartzite",
+                "detail": "Bright white, fine speckle."
+              },
+              {
+                "id": "upg-2",
+                "tier": "Upgrade",
+                "name": "Taj Mahal quartzite",
+                "detail": "Soft white with golden veining."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-tile-floor",
+        "name": "Bath tile - floor",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath tile - floor",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Marazzi Studio Life Terracotta 12 x 12",
+                "detail": "Saltillo-look porcelain."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "MSI Metro Sand 12 x 24",
+                "detail": "Warm sand stone look."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-tile-shower-wall",
+        "name": "Bath tile - shower wall",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath tile - shower wall",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Daltile Restore 4 x 4",
+                "detail": "Ivory gloss square tile."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-vanity-lighting",
+        "name": "Bath vanity lighting",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath vanity lighting",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Two-light vanity",
+                "detail": "White shades on brass."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Dawson sconce",
+                "detail": "Brushed brass."
+              },
+              {
+                "id": "alt-2",
+                "tier": "Alternate",
+                "name": "Musom sconce",
+                "detail": "Brass with crackled glass."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bath-lav-faucet",
+        "name": "Bath lav faucet",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Bath lav faucet",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta lav faucet",
+                "detail": "Brushed gold."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shower-trim",
+        "name": "Shower trim",
+        "scope": "",
+        "groups": [
+          {
+            "id": "main",
+            "label": "Shower trim",
+            "choices": [
+              {
+                "id": "sig",
+                "tier": "Signature",
+                "name": "Delta shower trim",
+                "detail": "Champagne bronze."
+              },
+              {
+                "id": "alt",
+                "tier": "Alternate",
+                "name": "Moen shower trim",
+                "detail": "Brushed gold."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sharedFinishes": [
+    {
+      "id": "windows",
+      "name": "Windows",
+      "scope": "Five units, 30 x 48 in.",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Windows",
+          "choices": [
+            {
+              "id": "sig",
+              "tier": "Signature",
+              "name": "American Craftsman 70 Series",
+              "detail": "White vinyl single-hung, Low-E glass, argon fill. Meets Florida building code; offered in every region."
+            },
+            {
+              "id": "alt",
+              "tier": "Alternate",
+              "name": "JELD-WEN V-2500",
+              "detail": "Vinyl casement or single-hung. U-factor 0.27, solar heat gain 0.17."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "entry-door",
+      "name": "Entry door",
+      "scope": "36 in. fiberglass, painted in your collection's door color",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Entry door",
+          "choices": [
+            {
+              "id": "sig",
+              "tier": "Signature",
+              "name": "Steves & Sons Legacy",
+              "detail": "Direct-glazed smooth fiberglass, 3/4-lite 6-lite with clear glass. Lifetime limited warranty."
+            },
+            {
+              "id": "alt",
+              "tier": "Alternate",
+              "name": "Masonite IMPACT",
+              "detail": "Impact-rated 3/4-lite 6-lite fiberglass. Meets Florida building code requirements."
+            },
+            {
+              "id": "upg",
+              "tier": "Upgrade",
+              "name": "Therma-Tru Smooth-Star",
+              "detail": "Premium fiberglass entry with dentil shelf."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appliances-refrigerator",
+      "name": "Appliances - refrigerator",
+      "scope": "Compact 24 in. kitchen suite in stainless",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Appliances - refrigerator",
+          "choices": [
+            {
+              "id": "sig",
+              "tier": "Signature",
+              "name": "GE 24 in. refrigerator",
+              "detail": "Stainless, bottom-freezer, counter-depth fit."
+            },
+            {
+              "id": "alt",
+              "tier": "Alternate",
+              "name": "Frigidaire 24 in. refrigerator",
+              "detail": "Stainless, top-freezer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appliances-dishwasher",
+      "name": "Appliances - dishwasher",
+      "scope": "",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Appliances - dishwasher",
+          "choices": [
+            {
+              "id": "sig",
+              "tier": "Signature",
+              "name": "GE 24 in. dishwasher",
+              "detail": "Stainless, built-in."
+            },
+            {
+              "id": "alt",
+              "tier": "Alternate",
+              "name": "Frigidaire 24 in. dishwasher",
+              "detail": "Stainless, built-in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appliances-cooking",
+      "name": "Appliances - cooking",
+      "scope": "",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Appliances - cooking",
+          "choices": [
+            {
+              "id": "sig",
+              "tier": "Signature",
+              "name": "GE 24 in. electric range",
+              "detail": "Smooth-top range with oven."
+            },
+            {
+              "id": "alt",
+              "tier": "Alternate",
+              "name": "GE 21 in. electric cooktop",
+              "detail": "Two-burner radiant cooktop, frees up cabinet space."
+            },
+            {
+              "id": "alt-2",
+              "tier": "Alternate",
+              "name": "Whirlpool 15 in. cooktop",
+              "detail": "Compact two-burner electric cooktop."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kitchen-sink",
+      "name": "Kitchen sink",
+      "scope": "",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Kitchen sink",
+          "choices": [
+            {
+              "id": "sig",
+              "tier": "Signature",
+              "name": "23 in. undermount single bowl",
+              "detail": "18-gauge stainless in a black nano finish, 9 in. deep."
+            },
+            {
+              "id": "alt",
+              "tier": "Alternate",
+              "name": "Modena 27 in. undermount single bowl",
+              "detail": "16-gauge brushed stainless, rounded corners."
+            },
+            {
+              "id": "upg",
+              "tier": "Upgrade",
+              "name": "33 in. undermount double-bowl workstation",
+              "detail": "18-gauge gunmetal stainless, with cutting board and rack. Needs a 36 in. sink base."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bathroom-sink",
+      "name": "Bathroom sink",
+      "scope": "",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Bathroom sink",
+          "choices": [
+            {
+              "id": "sig",
+              "tier": "Signature",
+              "name": "14.5 in. wall-mount sink",
+              "detail": "White vitreous china, compact rectangle. Saves floor space."
+            },
+            {
+              "id": "alt",
+              "tier": "Alternate",
+              "name": "Turner 24 in. wall-mount sink",
+              "detail": "Matte black vitreous china, wall-mount or vessel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interior-doors",
+      "name": "Interior doors",
+      "scope": "Bath and closet openings",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Interior doors",
+          "choices": [
+            {
+              "id": "sig",
+              "tier": "Signature",
+              "name": "Masonite molded panel",
+              "detail": "Primed 2-panel square top, prehung."
+            },
+            {
+              "id": "upg",
+              "tier": "Upgrade",
+              "name": "JELD-WEN barn slider",
+              "detail": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interior-trim",
+      "name": "Interior trim",
+      "scope": "Base and casing throughout",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Interior trim",
+          "choices": [
+            {
+              "id": "team",
+              "tier": "Team",
+              "name": "Selected with your Sundello team",
+              "detail": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heating-cooling",
+      "name": "Heating & cooling",
+      "scope": "Sized for the 320 sq ft plan",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Heating & cooling",
+          "choices": [
+            {
+              "id": "sig",
+              "tier": "Signature",
+              "name": "MRCOOL DIY 4th Gen mini split",
+              "detail": "12,000 BTU, 22 SEER ductless heat pump. Quiet, efficient year-round comfort."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "porch-ceiling",
+      "name": "Porch ceiling",
+      "scope": "Covered front porch",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Porch ceiling",
+          "choices": [
+            {
+              "id": "team",
+              "tier": "Team",
+              "name": "Selected with your Sundello team",
+              "detail": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decking-steps-rail",
+      "name": "Decking, steps & rail",
+      "scope": "Front porch and steps",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Decking, steps & rail",
+          "choices": [
+            {
+              "id": "team",
+              "tier": "Team",
+              "name": "Selected with your Sundello team",
+              "detail": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soffit-exterior-trim",
+      "name": "Soffit & exterior trim",
+      "scope": "Eaves and openings",
+      "groups": [
+        {
+          "id": "main",
+          "label": "Soffit & exterior trim",
+          "choices": [
+            {
+              "id": "sig",
+              "tier": "Signature",
+              "name": "Ply Gem vented vinyl soffit",
+              "detail": "White soffit with aluminum fascia and PVC opening trim."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
