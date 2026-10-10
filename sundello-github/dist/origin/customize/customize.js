@@ -369,6 +369,7 @@
 
   function quoteForm() {
     return '<form class="cz-form" id="quote-form" novalidate>' +
+      '<div class="cz-sr" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true"></label></div>' +
       '<h3>Request a quote</h3>' +
       '<p>Your selections are included with this note. Name, email, and ZIP are required.</p>' +
       '<label for="quote-name">Name</label>' +
@@ -465,12 +466,107 @@
       email: String(data.get('email') || '').trim(),
       phone: String(data.get('phone') || '').trim(),
       zip: String(data.get('zip') || '').trim(),
-      notes: String(data.get('notes') || '').trim()
+      notes: String(data.get('notes') || '').trim(),
+      company: String(data.get('company') || '')
     };
+  }
+
+  function upgradeCount() {
+    let count = 0;
+    finishGroups().forEach(function (group) {
+      const choice = group.group.choices.find(function (item) { return item.id === state.picks[group.key]; });
+      if (choice && choice.tier === 'Upgrade') count += 1;
+    });
+    return count;
+  }
+
+  function leadInput(fields) {
+    writeHash();
+    const collectionName = collection() ? collection().name : 'Not selected';
+    return {
+      name: fields.name,
+      email: fields.email,
+      phone: fields.phone,
+      zip: fields.zip,
+      notes: fields.notes,
+      company: fields.company || '',
+      collection: collectionName,
+      roof: roof() ? roof().name : 'Not selected',
+      layout: layout() ? layout().name : 'Not selected',
+      finishes: SundelloLead.finishes(collectionName, upgradeCount()),
+      shareLink: location.href
+    };
+  }
+
+  function markField(form, field) {
+    const ids = { name: 'quote-name', email: 'quote-email', phone: 'quote-phone', zip: 'quote-zip', notes: 'quote-notes' };
+    Object.keys(ids).forEach(function (key) {
+      const input = form.querySelector('#' + ids[key]);
+      if (input) input.setAttribute('aria-invalid', field === key ? 'true' : 'false');
+    });
+    return field && ids[field] ? form.querySelector('#' + ids[field]) : null;
+  }
+
+  function showThanks(form) {
+    form.innerHTML = '<p class="cz-status" role="status">Thanks, the Sundello team will reach out</p>';
+  }
+
+  function releaseForm(form) {
+    form.dataset.sending = '';
+    const button = form.querySelector('[type="submit"]');
+    if (button) button.disabled = false;
+  }
+
+  function openMailto(fields) {
+    writeHash();
+    const body = inquiryBody(fields);
+    const subject = quoteSubject();
+    if (SALES_EMAIL) {
+      const mailto = 'mailto:' + SALES_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      try { window.location.href = mailto; } catch (error) {}
+      setStatus('Your email app will open a message to ' + SALES_EMAIL + '. If it does not, use Copy inquiry.');
+      return;
+    }
+    showInquiry(body);
+    copyText(body).then(function (ok) {
+      setStatus(ok ? 'Inquiry copied.' : 'Select the inquiry text below to copy it.');
+    });
+  }
+
+  function submitToSpan(form, fields) {
+    const issue = SundelloLead.problems(fields);
+    const invalid = markField(form, issue ? issue.field : '');
+    if (issue) {
+      if (invalid) invalid.focus();
+      setStatus(issue.message);
+      return;
+    }
+    if (form.dataset.sending === '1') return;
+    form.dataset.sending = '1';
+    const button = form.querySelector('[type="submit"]');
+    if (button) button.disabled = true;
+    const built = SundelloLead.body(leadInput(fields));
+    if (!built.ok) {
+      openMailto(fields);
+      releaseForm(form);
+      return;
+    }
+    SundelloLead.post(built.body).then(function (result) {
+      if (result.ok) {
+        showThanks(form);
+        return;
+      }
+      openMailto(fields);
+      releaseForm(form);
+    });
   }
 
   function submitQuote(form) {
     const fields = formFields(form);
+    if (window.SundelloLead && SundelloLead.enabled()) {
+      submitToSpan(form, fields);
+      return;
+    }
     const email = form.querySelector('#quote-email');
     let invalid = null;
     ['quote-name', 'quote-email', 'quote-zip'].forEach(function (id) {
@@ -485,19 +581,7 @@
       setStatus('Add your name, email, and ZIP to request a quote.');
       return;
     }
-    const body = inquiryBody(fields);
-    const subject = quoteSubject();
-    if (SALES_EMAIL) {
-      window.location.href = 'mailto:' + SALES_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      setStatus('Your email app will open a message to ' + SALES_EMAIL + '. If it does not, use Copy inquiry.');
-      return;
-    }
-    showInquiry(body);
-    copyText(body).then(function (ok) {
-      setStatus(ok
-        ? 'A sales address is not connected yet, same as the Origin page, so this note was not emailed. The inquiry is copied, including your selections.'
-        : 'A sales address is not connected yet, same as the Origin page, so this note was not emailed. Copy the inquiry below. It includes your selections.');
-    });
+    openMailto(fields);
   }
 
   function copyInquiry() {

@@ -6,12 +6,13 @@
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
+    if (window.SundelloLead && SundelloLead.enabled()) {
+      submitSpan();
+      return;
+    }
     const fields = readFields();
     if (!fields) return;
-    compose(fields).then(function (pack) {
-      window.location.href = 'mailto:' + SALES_EMAIL + '?subject=' + encodeURIComponent(pack.subject) + '&body=' + encodeURIComponent(pack.body);
-      setStatus('Your email app will open a message to ' + SALES_EMAIL + '. If it does not, use Copy inquiry.');
-    });
+    compose(fields).then(openMailto);
   });
 
   document.getElementById('origin-copy').addEventListener('click', function () {
@@ -54,8 +55,80 @@
       email: String(data.get('email') || '').trim(),
       phone: String(data.get('phone') || '').trim(),
       zip: String(data.get('zip') || '').trim(),
-      notes: String(data.get('notes') || '').trim()
+      notes: String(data.get('notes') || '').trim(),
+      company: String(data.get('company') || '')
     };
+  }
+
+  function submitSpan() {
+    const fields = fieldsFromForm();
+    const issue = SundelloLead.problems(fields);
+    const invalid = markField(issue ? issue.field : '');
+    if (issue) {
+      if (invalid) invalid.focus();
+      setStatus(issue.message);
+      return;
+    }
+    if (form.dataset.sending === '1') return;
+    form.dataset.sending = '1';
+    const button = form.querySelector('[type="submit"]');
+    if (button) button.disabled = true;
+    compose(fields).then(function (pack) {
+      const built = SundelloLead.body({
+        name: fields.name,
+        email: fields.email,
+        phone: fields.phone,
+        zip: fields.zip,
+        notes: fields.notes,
+        company: fields.company || '',
+        collection: pack.collection,
+        roof: pack.roof,
+        layout: pack.layout,
+        finishes: SundelloLead.finishes(pack.collection, pack.upgrades),
+        shareLink: pack.share
+      });
+      if (!built.ok) {
+        openMailto(pack);
+        releaseForm();
+        return;
+      }
+      return SundelloLead.post(built.body).then(function (result) {
+        if (result.ok) {
+          showThanks();
+          return;
+        }
+        openMailto(pack);
+        releaseForm();
+      });
+    }).catch(function () {
+      openMailto(pack(null, readStorage(), fields));
+      releaseForm();
+    });
+  }
+
+  function markField(field) {
+    const ids = { name: 'origin-name', email: 'origin-email', phone: 'origin-phone', zip: 'origin-zip', notes: 'origin-notes' };
+    Object.keys(ids).forEach(function (key) {
+      const input = form.querySelector('#' + ids[key]);
+      if (input) input.setAttribute('aria-invalid', field === key ? 'true' : 'false');
+    });
+    return field && ids[field] ? form.querySelector('#' + ids[field]) : null;
+  }
+
+  function showThanks() {
+    form.innerHTML = '<p class="cz-status" role="status">Thanks, the Sundello team will reach out</p>';
+  }
+
+  function releaseForm() {
+    form.dataset.sending = '';
+    const button = form.querySelector('[type="submit"]');
+    if (button) button.disabled = false;
+  }
+
+  function openMailto(pack) {
+    const mailto = 'mailto:' + SALES_EMAIL + '?subject=' + encodeURIComponent(pack.subject) + '&body=' + encodeURIComponent(pack.body);
+    try { window.location.href = mailto; } catch (error) {}
+    setStatus('Your email app will open a message to ' + SALES_EMAIL + '. If it does not, use Copy inquiry.');
   }
 
   function compose(fields) {
@@ -112,7 +185,31 @@
       '',
       'Shareable link: ' + shareUrl(saved)
     );
-    return { subject: subject, body: lines.join('\n') };
+    return {
+      subject: subject,
+      body: lines.join('\n'),
+      collection: collectionName,
+      roof: roofName,
+      layout: layoutName,
+      upgrades: collectionItem ? countUpgrades(data, saved) : 0,
+      share: shareUrl(saved)
+    };
+  }
+
+  function countUpgrades(data, saved) {
+    if (!data || !saved || !saved.collection || !data.finishes || !data.finishes[saved.collection]) return 0;
+    let count = 0;
+    const categories = data.finishes[saved.collection].concat(data.sharedFinishes || []);
+    categories.forEach(function (category) {
+      (category.groups || []).forEach(function (group) {
+        const key = group.id === 'main' ? category.id : category.id + '__' + group.id;
+        const picks = saved.picks || {};
+        const fallback = group.choices && group.choices[0] ? group.choices[0].id : '';
+        const choice = find(group.choices, picks[key] || fallback);
+        if (choice && choice.tier === 'Upgrade') count += 1;
+      });
+    });
+    return count;
   }
 
   function finishLines(data, saved) {
