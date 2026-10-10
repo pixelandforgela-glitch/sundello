@@ -1,5 +1,5 @@
 /* Shared Span settings. Leave SPAN_BUSINESS_ID empty until it should go live. */
-var SPAN_BUSINESS_ID = "";
+var SPAN_BUSINESS_ID = "2d5ff86e-c52d-4a91-bed8-a57ec815ed59";
 var SPAN_BASE = "https://span.scaffold.site";
 
 var SundelloLead = (function () {
