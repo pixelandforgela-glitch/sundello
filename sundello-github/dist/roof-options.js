@@ -4,17 +4,17 @@
       label: 'Pitched roof',
       finishes: [
         {id:'coastal', label:'Coastal white + sage', color:'#e9e4d7', image:'pitched-coastal-white-sage.webp', description:'Chalk-white stucco, a sage door, and a light silver metal roof.'},
-        {id:'charcoal', label:'Charcoal + cedar', color:'#45443e', image:'pitched-charcoal-cedar.webp', description:'Charcoal siding, a cedar gable and porch, and a graphite metal roof.'},
+        {id:'charcoal', label:'Charcoal', color:'#45443e', image:'pitched-charcoal.webp', description:'Charcoal siding, warm-toned accents, and a graphite metal roof.'},
         {id:'clay', label:'Warm clay + bronze', color:'#b4714e', image:'pitched-warm-clay-bronze.webp', description:'Clay stucco, a muted turquoise door, and a bronze-toned metal roof.'}
       ]
     },
     flat: {
       label:'Flat roof',
       finishes:[
-        {id:'coastal', label:'Coastal California', color:'#e9e4d7', image:'coastal-california-signature-exterior.webp', description:'Cream stucco, driftwood tones, and a sage-green door.'},
+        {id:'coastal', label:'Coastal California', color:'#e9e4d7', image:'coastal-california-signature-exterior.webp', description:'Cream stucco, sandy neutral tones, and a sage-green door.'},
         {id:'keys', label:'Florida Keys', color:'#91c3c1', image:'florida-keys-signature-exterior.webp', description:'Sea-glass aqua, crisp white trim, and a coral door.'},
         {id:'rural', label:'Rural America', color:'#974a3c', image:'rural-america-signature-exterior.webp', description:'Barn-red walls, ivory trim, and charcoal accents.'},
-        {id:'mountain', label:'Colorado Mountains', color:'#344d3d', image:'colorado-mountains-signature-exterior.webp', description:'Forest green, cedar tones, and graphite detailing.'},
+        {id:'mountain', label:'Colorado Mountains', color:'#344d3d', image:'colorado-mountains-signature-exterior.webp', description:'Forest green, bronze-toned accents, and graphite detailing.'},
         {id:'clay', label:'New Mexico Plains', color:'#b4714e', image:'new-mexico-plains-signature-exterior.webp', description:'Adobe-clay stucco, a turquoise door, and bronze details.'}
       ]
     }
