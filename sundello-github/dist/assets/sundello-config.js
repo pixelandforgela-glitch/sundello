@@ -37,7 +37,7 @@ var SundelloLead = (function () {
   }
 
   function finishes(collectionName, upgradeCount) {
-    var name = text(collectionName).trim() || "Origin";
+    var name = text(collectionName).trim() || "Ava";
     var count = parseInt(upgradeCount, 10);
     if (!isFinite(count) || count < 0) count = 0;
     var line = name + ", " + count + (count === 1 ? " upgrade" : " upgrades");

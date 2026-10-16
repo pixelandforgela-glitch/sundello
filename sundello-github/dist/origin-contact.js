@@ -1,4 +1,4 @@
-/* Origin #contact quote form. SALES_EMAIL matches /app.js and the customizer. */
+/* Ava #contact quote form. SALES_EMAIL matches /app.js and the customizer. */
 (function () {
   const SALES_EMAIL = 'todd.ellis@gbs-usa.build';
   const form = document.getElementById('origin-quote');
@@ -133,7 +133,7 @@
 
   function compose(fields) {
     const saved = readStorage();
-    return fetch('/origin/customize/data.json')
+    return fetch('/ava/customize/data.json')
       .then(function (response) { return response.ok ? response.json() : null; })
       .catch(function () { return null; })
       .then(function (data) { return pack(data, saved, fields); });
@@ -157,12 +157,12 @@
     const collectionName = collectionItem ? collectionItem.name : 'Not selected';
     const named = roofItem && layoutItem && collectionItem;
     const subject = named
-      ? 'Origin quote request - ' + collectionName + ', ' + roofName + ', ' + layoutName
-      : 'Origin quote request';
+      ? 'Ava quote request - ' + collectionName + ', ' + roofName + ', ' + layoutName
+      : 'Ava quote request';
     const lines = [
       'Hello Sundello,',
       '',
-      'I am interested in the Origin 320.',
+      'I am interested in the Ava 320.',
       data && data.price ? data.price : 'Starting at $99,000 plus site work and permits',
       '',
       'Roof: ' + roofName,
@@ -236,7 +236,7 @@
   }
 
   function shareUrl(saved) {
-    const base = location.origin + '/origin/customize/';
+    const base = location.origin + '/ava/customize/';
     if (!saved) return base;
     const params = new URLSearchParams();
     if (saved.roof) params.set('roof', saved.roof);
