@@ -1,0 +1,46 @@
+/* Workforce hub and market pages. Builds on styles.css tokens and the Outpost page classes
+   (outpost.css, workforce/outpost/outpost-v2.css). Gutters match: 4.5%, 20px on phones. */
+.wf-audience{margin:0 0 20px;font-size:15px;color:#d3dbcd}
+.wf-problem{padding:84px 4.5% 0;display:grid;grid-template-columns:.85fr 1.4fr;gap:20px 70px;align-items:start}
+.wf-problem .outpost-kicker{grid-column:1/-1;margin:0}
+.wf-problem h2{font-size:clamp(34px,3.5vw,48px);line-height:1.08;margin:0;letter-spacing:-.03em;text-wrap:balance}
+.wf-problem p:not(.outpost-kicker){margin:0;font-size:19px;line-height:1.65;max-width:620px}
+.wf-fit{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.wf-fit figure{margin:0;min-width:0}
+.wf-fit img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover}
+.wf-fit figcaption{padding-top:10px;font-size:13px;color:var(--muted)}
+.wf-rows{margin:0;border-top:2px solid var(--ink)}
+.wf-rows>div{display:grid;grid-template-columns:130px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.wf-rows dt{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--muted);padding-top:3px}
+.wf-rows dd{margin:0;font-size:17px;line-height:1.5}
+.wf-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:0;padding:0;list-style:none}
+.wf-cards.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.wf-cards>li{display:flex;flex-direction:column;gap:10px;padding:26px 24px 30px;background:#EDE5D6;border-top:4px solid var(--ink)}
+.wf-cards>li.dark{background:var(--ink);color:var(--paper);border-top-color:var(--amber)}
+.wf-cards .wf-step{margin:0;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--muted)}
+.wf-cards>li.dark .wf-step,.wf-cards>li.dark p,.wf-cards>li.dark ul{color:#d3dbcd}
+.wf-cards h3{margin:0;font-size:22px;letter-spacing:-.02em;line-height:1.2}
+.wf-cards p{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}
+.wf-cards ul{margin:0;padding-left:18px;font-size:15px;line-height:1.7}
+.wf-units{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.wf-units a{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit;min-width:0}
+.wf-units img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+.wf-units strong{font-size:20px;font-weight:500;letter-spacing:-.02em}
+.wf-units span{font-size:14px;color:var(--muted)}
+.wf-units a:hover strong{color:var(--accent)}
+.wf-markets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 28px}
+.wf-markets a{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit;min-width:0}
+.wf-markets img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover}
+.wf-markets strong{font-size:24px;font-weight:500;letter-spacing:-.02em}
+.wf-markets span{font-size:15px;line-height:1.55;color:var(--muted)}
+.wf-markets a:hover strong{color:var(--accent)}
+.wf-cta{margin:84px 0 0;padding:64px 4.5%;background:var(--ink);color:var(--paper);display:grid;grid-template-columns:1.2fr 1fr;gap:28px 70px;align-items:end}
+.wf-cta h2{margin:0;font-size:clamp(34px,3.5vw,48px);line-height:1.08;letter-spacing:-.03em}
+.wf-cta p{margin:0 0 22px;font-size:17px;line-height:1.65;color:#d3dbcd;max-width:520px}
+.wf-cta .wf-actions{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center}
+.wf-cta .outpost-link{border-color:var(--paper);color:var(--paper)}
+.wf-pilot-note{margin:0}
+@media(max-width:1000px){.wf-cards{grid-template-columns:1fr 1fr}.wf-markets{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){.wf-problem{grid-template-columns:1fr;padding-top:64px}.wf-fit{grid-template-columns:1fr;gap:28px}.wf-units{grid-template-columns:1fr}.wf-cards.three{grid-template-columns:1fr}.wf-cta{grid-template-columns:1fr}}
+@media(max-width:600px){.wf-cards,.wf-markets{grid-template-columns:1fr}.wf-rows>div{grid-template-columns:1fr;gap:4px}}
+@media(max-width:520px){.wf-problem,.wf-cta{padding-left:20px;padding-right:20px}.wf-problem p:not(.outpost-kicker){font-size:17px}}
