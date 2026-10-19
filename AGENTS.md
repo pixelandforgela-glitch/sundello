@@ -4,19 +4,21 @@ This is the only instruction file for this repo. `CLAUDE.md`, `GEMINI.md`, and `
 
 Sundello Homes markets compact 320 sq ft (20 × 16 ft) homes. The public site is a small hand-written static site: HTML, CSS, and vanilla JavaScript. No framework, no build. Blair owns it and is the only person who merges to `main`.
 
-One page per home, plus Outpost for work housing. `/` is the site landing. It points people to the homes and to Outpost. Do not put a single model back on `/`.
+One page per home, plus Outpost and the workforce market pages for work housing. `/` is the site landing. It points people to the homes and to Outpost. Do not put a single model back on `/`.
 
 Public pages:
 
 - **Home** (`/`): landing for the homes and for workforce.
 - **Ava 320** (`/ava/`): a studio home with flat or pitched roof options and regional finish palettes, for individual buyers. It was called Origin 320 until Oct 16, 2026, when Blair renamed it Ava; the Origin page and customizer moved to `/ava/`. It has a quote form (`#contact`) and links to the customizer at `/ava/customize/`. The approved price wording is “Starting at $99,000 plus site work and permits”, confirmed by Blair on October 10, 2026 and again for Ava on October 16, 2026. Use those words exactly, on the Ava page and the customizer.
-- **Outpost** (`/workforce/outpost/`): the only work housing offering (Blair, Oct 16, 2026). Rev 4.4 units S1/D2-S, D2-K and S-A, the site planner (`workforce/outpost/builder/`) and a contact form. Both submit to the Span lead intake like the Ava form.
+- **Outpost** (`/workforce/outpost/`): the only work housing product (Blair, Oct 16, 2026). Rev 4.4 units S1/D2-S, D2-K and S-A, the site planner (`workforce/outpost/builder/`) and a contact form. Both submit to the Span lead intake like the Ava form.
+- **Workforce hub** (`/workforce/`): lists the six markets below and links to Outpost (Blair, Oct 19, 2026).
+- **Workforce market pages** (`/workforce/data-centers/`, `/workforce/schools/`, `/workforce/ski-resorts/`, `/workforce/seasonal/`, `/workforce/tribal-nations/`, `/workforce/defense/`): one page per market, written from Blair's Workforce Pilot Pitch decks D to I (Oct 19, 2026). Each sells Outpost for that market and sends people to the Outpost contact form and planner. They have no form of their own.
 
-Work housing is Outpost only. The Workforce menu on every page lists only Outpost. The old hub and Haven pages are kept, unpublished, in `sundello-github/archive/workforce/`. Do not link Haven or the hub from any page unless Blair brings them back.
+Outpost is the only work housing product. The market pages describe how Outpost fits each market; they are not separate products. The Workforce menu on every page lists Overview (`/workforce/`), Outpost and the six market pages, in that order. Market page copy stays general, as Blair decided on Oct 19, 2026: no company or project names, no statistics or figures, no project examples (including GBS builds), no prices and no lead times. The retired Haven pages are kept, unpublished, in `sundello-github/archive/workforce/`. Do not link Haven from any page unless Blair brings it back.
 
 Each home model page (`/ava/` and any future home) has a square-foot selector at the top. The only size today is 320, marked current. Add a future size as another link in that list. Do not redesign the page to do it.
 
-`/outpost/`, `/haven/`, `/workforce/` and `/workforce/haven/` are old addresses. Each is a short `noindex` page with a meta refresh and a link to `/workforce/outpost/`. `/origin/` and `/origin/customize/` are the same kind of page pointing at `/ava/` and `/ava/customize/`, so a bookmark still resolves. They are not canonical and they are not in the sitemap. Do not add `_redirects` for them.
+`/outpost/`, `/haven/` and `/workforce/haven/` are old addresses. Each is a short `noindex` page with a meta refresh and a link to `/workforce/outpost/`. `/origin/` and `/origin/customize/` are the same kind of page pointing at `/ava/` and `/ava/customize/`, so a bookmark still resolves. They are not canonical and they are not in the sitemap. Do not add `_redirects` for them.
 
 
 ## Where the files are
@@ -28,7 +30,10 @@ The GitHub root is not the website. Publish `sundello-github/dist/` only.
 | `sundello-github/dist/` | The website. This is the only folder a host may publish. |
 | `sundello-github/dist/index.html` | Site landing (`/`) |
 | `sundello-github/dist/ava/index.html` | Ava 320 (`/ava/`) |
-| `sundello-github/dist/workforce/index.html` | Old-address courtesy page for `/workforce/` |
+| `sundello-github/dist/workforce/index.html` | Workforce hub (`/workforce/`) |
+| `sundello-github/dist/workforce/<market>/index.html` | Market pages: `data-centers`, `schools`, `ski-resorts`, `seasonal`, `tribal-nations`, `defense` |
+| `sundello-github/dist/workforce/markets.css` | Styles for the hub and market pages, on top of `outpost.css` and `workforce/outpost/outpost-v2.css` |
+| `sundello-github/dist/assets/workforce/` | Market page renders (1600 px and 900 px webp) |
 | `sundello-github/dist/workforce/outpost/index.html` | Outpost 320 (`/workforce/outpost/`) |
 | `sundello-github/dist/workforce/haven/index.html` | Old-address courtesy page for `/workforce/haven/` |
 | `sundello-github/dist/ava/customize/index.html` | Ava customizer (`/ava/customize/`) |
@@ -42,7 +47,7 @@ The GitHub root is not the website. Publish `sundello-github/dist/` only.
 | `sundello-github/dist/favicon.ico` | 16, 32 and 48 px icon. Pages also link the SVG mark. |
 | `sundello-github/dist/outpost/index.html` | Old-address courtesy page for `/outpost/` |
 | `sundello-github/dist/haven/index.html` | Old-address courtesy page for `/haven/` |
-| `sundello-github/archive/workforce/` | The retired Workforce hub and Haven pages. Not published. |
+| `sundello-github/archive/workforce/` | The retired first Workforce hub and Haven pages. Not published. |
 | `sundello-github/dist/styles.css` | Site styles and the design tokens |
 | `sundello-github/dist/navigation.css` | Shared header. This is the file the pages load. |
 | `sundello-github/dist/navigation.js` | Shared header menu behavior |
@@ -51,7 +56,7 @@ The GitHub root is not the website. Publish `sundello-github/dist/` only.
 
 `sundello-github/dist/assets/hero.webp` is not referenced by any page. Leave it.
 
-Header, footer, and page copy are written into each HTML file. There is no shared template and there must not be a build step to create one. The HTML, CSS, and JS are packed onto long lines. Edit the exact text you mean to change. Do not reflow a whole file unless that is the task. A footer change is one edit per page (ten pages, including the courtesy pages and `404.html`).
+Header, footer, and page copy are written into each HTML file. There is no shared template and there must not be a build step to create one. The HTML, CSS, and JS are packed onto long lines. Edit the exact text you mean to change. Do not reflow a whole file unless that is the task. A footer change is one edit per page (every `index.html` in the publish folder, including the courtesy pages, the market pages and `404.html`).
 
 ## Preview locally
 
@@ -61,7 +66,7 @@ From the repo root:
 python3 -m http.server --directory sundello-github/dist
 ```
 
-Open `http://127.0.0.1:8000/`. Check `/`, `/ava/`, `/ava/customize/`, `/workforce/outpost/`, `/privacy/`, `/terms/`, and the old-address pages `/origin/`, `/origin/customize/`, `/outpost/`, `/haven/`, `/workforce/` and `/workforce/haven/`.
+Open `http://127.0.0.1:8000/`. Check `/`, `/ava/`, `/ava/customize/`, `/workforce/`, `/workforce/outpost/`, the six market pages, `/privacy/`, `/terms/`, and the old-address pages `/origin/`, `/origin/customize/`, `/outpost/`, `/haven/` and `/workforce/haven/`.
 
 Python’s server does not use `404.html` for unknown paths. Open `http://127.0.0.1:8000/404.html` to preview the not-found page. On Cloudflare Pages, that file is the body of a real 404 for any missing URL, so every asset and link in `404.html` stays root-absolute (`/styles.css`, not `styles.css`).
 
@@ -147,7 +152,14 @@ There is no `_headers` file. Cloudflare Pages already serves `.webp` as `image/w
 - `https://sundello.com/`
 - `https://sundello.com/ava/`
 - `https://sundello.com/ava/customize/`
+- `https://sundello.com/workforce/`
 - `https://sundello.com/workforce/outpost/`
+- `https://sundello.com/workforce/data-centers/`
+- `https://sundello.com/workforce/schools/`
+- `https://sundello.com/workforce/ski-resorts/`
+- `https://sundello.com/workforce/seasonal/`
+- `https://sundello.com/workforce/tribal-nations/`
+- `https://sundello.com/workforce/defense/`
 - `https://sundello.com/privacy/`
 - `https://sundello.com/terms/`
 
@@ -158,15 +170,22 @@ Canonical and `og:url` on the public pages:
 - `https://sundello.com/`
 - `https://sundello.com/ava/`
 - `https://sundello.com/ava/customize/`
+- `https://sundello.com/workforce/`
 - `https://sundello.com/workforce/outpost/`
+- `https://sundello.com/workforce/data-centers/`
+- `https://sundello.com/workforce/schools/`
+- `https://sundello.com/workforce/ski-resorts/`
+- `https://sundello.com/workforce/seasonal/`
+- `https://sundello.com/workforce/tribal-nations/`
+- `https://sundello.com/workforce/defense/`
 - `https://sundello.com/privacy/`
 - `https://sundello.com/terms/`
 
-The courtesy pages at `/outpost/`, `/haven/`, `/workforce/` and `/workforce/haven/` are `noindex` and point their canonical at `/workforce/outpost/`. Do not list them in the sitemap.
+The courtesy pages at `/outpost/`, `/haven/` and `/workforce/haven/` are `noindex` and point their canonical at `/workforce/outpost/`. Do not list them in the sitemap.
 
-Do not change existing titles or descriptions unless the task says to. Ava keeps the description Origin had, with the name changed. Outpost’s title and description were rewritten for Rev 4.4 (Oct 16, 2026). Ava’s title is `Sundello Ava 320` because `/` is the site landing, not the Ava page. The landing and Outpost pages have their own titles and descriptions.
+Do not change existing titles or descriptions unless the task says to. Ava keeps the description Origin had, with the name changed. Outpost’s title and description were rewritten for Rev 4.4 (Oct 16, 2026). Ava’s title is `Sundello Ava 320` because `/` is the site landing, not the Ava page. The landing and Outpost pages have their own titles and descriptions. The workforce hub and each market page have their own title and description (Oct 19, 2026).
 
-Social previews: the landing, Ava, customizer, Outpost, privacy and terms pages use `https://sundello.com/assets/og-sundello.png` (1200 × 630, flat deep green with the wordmark) in `og:image` and `twitter:image`, with `twitter:card` set to `summary_large_image`. Every page has a footer link to `/privacy/` and `/terms/`.
+Social previews: the landing, Ava, customizer, Outpost, workforce hub, market, privacy and terms pages use `https://sundello.com/assets/og-sundello.png` (1200 × 630, flat deep green with the wordmark) in `og:image` and `twitter:image`, with `twitter:card` set to `summary_large_image`. Every page has a footer link to `/privacy/` and `/terms/`.
 
 ## Checks before a PR
 
@@ -174,7 +193,7 @@ Social previews: the landing, Ava, customizer, Outpost, privacy and terms pages 
 python3 -m http.server --directory sundello-github/dist
 ```
 
-Confirm `/`, `/ava/`, `/ava/customize/`, `/workforce/outpost/`, `/privacy/`, `/terms/`, the courtesy pages `/origin/`, `/origin/customize/`, `/outpost/`, `/haven/`, `/workforce/`, `/workforce/haven/`, and `/404.html` return 200. Confirm the prices appear only where approved:
+Confirm `/`, `/ava/`, `/ava/customize/`, `/workforce/`, `/workforce/outpost/`, the six market pages, `/privacy/`, `/terms/`, the courtesy pages `/origin/`, `/origin/customize/`, `/outpost/`, `/haven/`, `/workforce/haven/`, and `/404.html` return 200. Confirm the prices appear only where approved:
 
 ```bash
 grep -rn "blair@enterlectual.com" sundello-github/dist   # expect nothing: the Haven page is retired
