@@ -726,3 +726,26 @@ body.hv2 .hv2-photo-grid img {
   .hv2-frame[data-frame="3"] { opacity: 1 !important; }
   .hv2-steps li { opacity: 1; }
 }
+
+/* Europa $99 hero */
+.eu-hero{position:relative;min-height:calc(100vh - 80px);display:flex;flex-direction:column;justify-content:flex-end;padding:var(--page-pad);color:#fff;overflow:hidden}
+.eu-hero picture,.eu-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.eu-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,34,28,0) 40%,rgba(15,34,28,.75));z-index:1}
+.eu-hero-copy,.eu-deal{position:relative;z-index:2}
+.eu-hero .eyebrow{color:var(--amber,#E6B65B)}
+.eu-hero h1{font-size:clamp(48px,8vw,110px);font-weight:600;letter-spacing:-.04em;line-height:1;margin:0 0 10px;color:#fff}
+.eu-sub{font-size:clamp(18px,2vw,26px);margin:0}
+.eu-deal{position:absolute;top:clamp(24px,6vw,80px);right:var(--page-pad);display:flex;flex-direction:column;align-items:center;gap:14px}
+.eu-sticker{display:grid;place-items:center;width:clamp(170px,18vw,240px);aspect-ratio:1;text-align:center;text-decoration:none;color:var(--ink);background:var(--amber,#E6B65B);clip-path:polygon(50% 0,59% 9%,71% 4%,75% 17%,88% 16%,86% 29%,98% 34%,91% 45%,100% 55%,90% 63%,95% 76%,82% 79%,80% 92%,67% 90%,59% 100%,50% 92%,41% 100%,33% 90%,20% 92%,18% 79%,5% 76%,10% 63%,0 55%,9% 45%,2% 34%,14% 29%,12% 16%,25% 17%,29% 4%,41% 9%);transform:rotate(-12deg);font-weight:700;font-size:clamp(15px,1.4vw,19px);line-height:1.2;padding:18%;transition:transform .2s}
+.eu-sticker strong{display:block;font-size:2.4em;line-height:1}
+.eu-sticker:hover{transform:rotate(-6deg) scale(1.04)}
+.eu-reserve{background:var(--ink);color:#fff;min-height:44px;padding:10px 22px}
+.eu-terms{margin:0;font-size:13px;font-weight:600;background:rgba(15,34,28,.8);padding:4px 10px}
+.eu-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;background:var(--ink);color:var(--paper);padding:36px var(--page-pad)}
+.eu-benefits h2{font-size:20px;letter-spacing:-.01em;margin:0 0 6px;color:var(--paper)}
+.eu-benefits p{margin:0;font-size:15px;opacity:.9}
+.eu-second{margin:0}.eu-second img{display:block;width:100%;height:auto;max-height:80vh;object-fit:cover}
+.eu-second figcaption{padding:12px var(--page-pad)}
+@media(max-width:700px){.eu-hero{min-height:88vh}.eu-deal{top:20px;right:16px}.eu-sticker{width:140px;font-size:13px}.eu-benefits{grid-template-columns:1fr}}
+.eu-hero picture{display:block}.eu-hero .eu-hero-bg{height:100%!important;max-height:none!important;aspect-ratio:auto!important}
+.eu-hero .eyebrow{color:#E6B65B!important;text-shadow:0 1px 6px rgba(0,0,0,.5)}
