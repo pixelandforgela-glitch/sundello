@@ -749,3 +749,7 @@ body.hv2 .hv2-photo-grid img {
 @media(max-width:700px){.eu-hero{min-height:88vh}.eu-deal{top:20px;right:16px}.eu-sticker{width:140px;font-size:13px}.eu-benefits{grid-template-columns:1fr}}
 .eu-hero picture{display:block}.eu-hero .eu-hero-bg{height:100%!important;max-height:none!important;aspect-ratio:auto!important}
 .eu-hero .eyebrow{color:#E6B65B!important;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.eu-terms{max-width:260px;text-align:center}
+.eu-price{margin:10px 0 0;font-size:clamp(16px,1.6vw,20px);font-weight:600}
+.eu-foot{margin:8px 0 0;max-width:60ch;font-size:12px;line-height:1.5;opacity:.92;text-shadow:0 1px 4px rgba(0,0,0,.6)}.eu-hero-copy{text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.eu-foot{background:rgba(15,34,28,.6);padding:6px 10px}@media(max-width:700px){.eu-foot{margin-right:64px}}
