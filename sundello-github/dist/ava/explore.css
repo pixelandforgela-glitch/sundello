@@ -1,0 +1,35 @@
+/* Ava discovery. Page-scoped styles retain Sundello's shared brand tokens. */
+.discovery-hero{position:relative;isolation:isolate;min-height:640px;height:calc(100svh - 100px);max-height:1000px;background:var(--ink);color:var(--paper);display:flex;align-items:flex-end;padding:70px var(--page-pad);overflow:hidden}
+body.hv2 .discovery-image{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 56%}
+.discovery-hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,28,22,.75),rgba(9,28,22,.12) 85%),linear-gradient(0deg,rgba(9,28,22,.48),transparent 65%)}
+.discovery-copy{max-width:780px}
+body.hv2 .discovery-copy .eyebrow{color:var(--paper)}
+body.hv2 .discovery-copy h1{color:var(--paper);font-size:clamp(44px,6.2vw,88px);line-height:1.02;letter-spacing:-.055em;max-width:15ch}
+.discovery-copy>p:not(.eyebrow){font-size:clamp(17px,1.5vw,21px);max-width:42ch;margin:24px 0 30px;color:var(--paper)}
+.discovery-actions{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+body.hv2 .discovery-actions .button{min-width:190px;justify-content:space-between}
+.discovery-link{color:var(--paper);text-underline-offset:6px;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+.discovery-link:hover{color:var(--amber)}
+.discovery-caption{position:absolute;bottom:20px;right:var(--page-pad);font-size:12px;color:var(--paper)}
+.ava-journey{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;padding:20px var(--page-pad);border-bottom:1px solid var(--line);background:var(--paper)}
+.ava-journey a{color:var(--ink);font-size:14px;text-decoration:none;min-height:44px;display:flex;align-items:center}
+.ava-journey a:hover{text-decoration:underline;text-underline-offset:5px}
+.ava-intro{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+body.hv2 .origin-section .eyebrow{color:var(--muted)}
+body.hv2 .origin-structure .eyebrow{color:var(--amber)}
+.ava-section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}
+.ava-view-controls{display:flex;border-bottom:1px solid var(--line);gap:8px}
+.ava-view-controls[hidden]{display:none}
+.ava-view-controls button{font:inherit;padding:12px 20px;background:transparent;color:var(--ink);border:0;border-bottom:3px solid transparent;cursor:pointer;min-height:48px}
+.ava-view-controls button[aria-pressed=true]{border-bottom-color:var(--accent);font-weight:600}
+.ava-view-controls button:focus-visible,.ava-journey a:focus-visible,.discovery-hero a:focus-visible{outline:3px solid var(--amber);outline-offset:5px}
+.ava-explore-figure{margin:0}
+body.hv2 .ava-explore-figure img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.ava-explore-figure figcaption{padding:14px 0;color:var(--muted);font-size:13px}
+.origin-page .origin-facts{gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.origin-page .origin-facts li{background:transparent;border:0;padding:24px 12px}
+.origin-page .origin-panel{background:transparent;border:0;border-top:1px solid var(--line);padding:24px 0}
+.origin-page .origin-card{background:transparent;border:0}
+.origin-page .origin-card div{padding:20px 0 30px}
+.origin-page .origin-section[id]{scroll-margin-top:30px}
+@media(max-width:700px){.discovery-hero{height:auto;min-height:680px;padding:220px 24px 64px}.discovery-hero:after{background:linear-gradient(0deg,rgba(9,28,22,.9),rgba(9,28,22,.08))}.discovery-copy{width:100%}.discovery-actions{gap:12px;align-items:flex-start;flex-direction:column}.discovery-caption{font-size:10px;right:24px}.ava-journey{gap:6px 22px;padding:12px 20px;justify-content:flex-start}.ava-intro{grid-template-columns:1fr;gap:24px}.ava-section-heading{align-items:start;flex-direction:column}.ava-view-controls{width:100%}.ava-view-controls button{flex:1}.discovery-copy>p:not(.eyebrow){max-width:30ch}}
