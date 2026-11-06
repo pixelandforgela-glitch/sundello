@@ -1,4 +1,4 @@
-/* Ava discovery. Page-scoped styles retain Sundello's shared brand tokens. */
+/* Ava discovery and the blue, green, and yellow palette study. */
 .discovery-hero{position:relative;isolation:isolate;min-height:640px;height:calc(100svh - 100px);max-height:1000px;background:var(--ink);color:var(--paper);display:flex;align-items:flex-end;padding:70px var(--page-pad);overflow:hidden}
 body.hv2 .discovery-image{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 56%}
 .discovery-hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,28,22,.75),rgba(9,28,22,.12) 85%),linear-gradient(0deg,rgba(9,28,22,.48),transparent 65%)}
@@ -33,3 +33,42 @@ body.hv2 .ava-explore-figure img{width:100%;height:auto;aspect-ratio:3/2;object-
 .origin-page .origin-card div{padding:20px 0 30px}
 .origin-page .origin-section[id]{scroll-margin-top:30px}
 @media(max-width:700px){.discovery-hero{height:auto;min-height:680px;padding:220px 24px 64px}.discovery-hero:after{background:linear-gradient(0deg,rgba(9,28,22,.9),rgba(9,28,22,.08))}.discovery-copy{width:100%}.discovery-actions{gap:12px;align-items:flex-start;flex-direction:column}.discovery-caption{font-size:10px;right:24px}.ava-journey{gap:6px 22px;padding:12px 20px;justify-content:flex-start}.ava-intro{grid-template-columns:1fr;gap:24px}.ava-section-heading{align-items:start;flex-direction:column}.ava-view-controls{width:100%}.ava-view-controls button{flex:1}.discovery-copy>p:not(.eyebrow){max-width:30ch}}
+
+body.hv2:where(.origin-page,.sundello-discover){--ink:#14264D;--paper:#FFFFFF;--muted:#536079;--accent:#2458D6;--amber:#FFE15A;--line:#D6DDEB;--ink-deep:#102042;--ink-tint:#EDF3FF;--line-soft:#D6DDEB;--electric:#2B64F6;--lime:#3FF05B;background:#fff}
+body.hv2:where(.origin-page,.sundello-discover) h1,body.hv2:where(.origin-page,.sundello-discover) h2,body.hv2:where(.origin-page,.sundello-discover) h3{font-family:Inter,Arial,sans-serif;font-weight:500;letter-spacing:-.035em}
+:where(.origin-page,.sundello-discover) .site-header,:where(.origin-page,.sundello-discover) .choice-bar{background:#fff;border-color:var(--line)}
+:where(.origin-page,.sundello-discover) .site-header .brand,:where(.origin-page,.sundello-discover) .site-header summary,:where(.origin-page,.sundello-discover) .site-header .nav-cta,:where(.origin-page,.sundello-discover) .choice-bar p{color:var(--ink)}
+:where(.origin-page,.sundello-discover) .brand img{filter:brightness(0) saturate(100%) invert(31%) sepia(96%) saturate(2940%) hue-rotate(219deg) brightness(98%) contrast(96%)}
+:where(.origin-page,.sundello-discover) .work-links{background:#fff;border-color:var(--line)}
+:where(.origin-page,.sundello-discover) .work-links a{color:var(--ink)}
+:where(.origin-page,.sundello-discover) .work-links a:hover,:where(.origin-page,.sundello-discover) .work-links a[aria-current=page]{background:var(--ink-tint)}
+:where(.origin-page,.sundello-discover) .work-links small{color:var(--muted)}
+:where(.origin-page,.sundello-discover) .choice-bar [aria-current=page]{background:var(--electric);color:#fff;border-color:var(--electric)}
+.discovery-hero{background:var(--electric);padding:64px var(--page-pad);min-height:620px;height:calc(100svh - 168px);align-items:center}
+body.hv2 .discovery-image{left:47%;width:53%;object-position:center;height:100%}
+.discovery-hero:after{display:none}
+.discovery-copy{width:40%;max-width:540px}
+body.hv2 .discovery-copy h1{font-size:clamp(42px,4.6vw,68px);line-height:1.07;letter-spacing:-.04em}
+body.hv2 .discovery-copy .eyebrow{color:var(--amber);font-size:11px;letter-spacing:.1em}
+.discovery-copy>p:not(.eyebrow){font-size:18px;line-height:1.65;margin:24px 0 32px}
+.discovery-actions{gap:16px;align-items:flex-start;flex-direction:column}
+body.hv2 .discovery-actions .button{background:var(--lime);color:#102042;border-radius:6px;font-weight:600;min-width:205px}
+body.hv2 .discovery-actions .button:hover{background:var(--amber);color:#102042}
+.discovery-caption{background:#102042;padding:7px 12px;border-radius:3px;right:20px;bottom:16px}
+.ava-journey{background:#F1F5FF;border-bottom:0}
+.ava-journey a:last-child{color:#173EAA;font-weight:600}
+body.hv2 .origin-section .eyebrow{color:#2458D6}
+.ava-view-controls button[aria-pressed=true]{background:var(--amber);border-bottom-color:var(--ink);border-radius:4px 4px 0 0;color:var(--ink)}
+body.hv2 .origin-structure{background:var(--electric);color:#fff}
+body.hv2 .origin-structure h2{color:#fff}
+body.hv2 .origin-structure .eyebrow,.origin-structure .origin-struct span{color:var(--amber)}
+body.hv2:where(.origin-page,.sundello-discover) .button-ink{background:var(--lime);color:#102042;border-radius:6px;font-weight:600}
+body.hv2:where(.origin-page,.sundello-discover) .button-ink:hover{background:var(--amber)}
+.origin-page .hv2-contact-box{background:#F1F5FF}
+.sundello-discover .hv2-tech{background:#14264D}
+.sundello-discover .hv2-future-panel{background:var(--electric);color:#fff}
+.sundello-discover .hv2-future-panel p{color:#fff}
+.sundello-discover .hv2-beat-strip strong{background:var(--amber);color:var(--ink);padding:4px 8px;border-radius:3px}
+:where(.origin-page,.sundello-discover) :focus-visible{outline:3px solid #2458D6;outline-offset:4px}
+.discovery-hero :focus-visible{outline-color:var(--amber)}
+@media(max-width:700px){.discovery-hero{display:flex;flex-direction:column;align-items:stretch;padding:0;min-height:0;height:auto}.discovery-copy{width:auto;max-width:none;padding:40px 24px 44px;order:0}body.hv2 .discovery-image{position:relative;left:auto;inset:auto;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;order:1;z-index:0}body.hv2 .discovery-copy h1{font-size:44px;max-width:14ch}.discovery-copy>p:not(.eyebrow){font-size:17px;margin:20px 0 26px}.discovery-caption{z-index:1;font-size:10px;bottom:12px;right:12px}.discovery-actions{gap:12px}.ava-journey{gap:4px 18px}}
